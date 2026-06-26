@@ -1,0 +1,24 @@
+{
+  "ProjectAppMetadata": {
+    "ActionSchemaPagePage_ProceedwithWatchlist_click.xaml": {
+      "AppFormId": "idcb2014c9d6fc4748862a065d1bbdf8c8",
+      "IsAppQueryBuilder": null
+    },
+    "ActionSchemaPagePage_Proceed_click.xaml": {
+      "AppFormId": "idcb2014c9d6fc4748862a065d1bbdf8c8",
+      "IsAppQueryBuilder": null
+    },
+    "ActionSchemaPagePage_EditGrid_source.xaml": {
+      "AppFormId": "idcb2014c9d6fc4748862a065d1bbdf8c8",
+      "IsAppQueryBuilder": true
+    },
+    "ActionSchemaPagePage_EditGrid_rowmodified.xaml": {
+      "AppFormId": "idcb2014c9d6fc4748862a065d1bbdf8c8",
+      "IsAppQueryBuilder": null
+    },
+    "ActionSchemaPagePage_OnHold_click.xaml": {
+      "AppFormId": "idcb2014c9d6fc4748862a065d1bbdf8c8",
+      "IsAppQueryBuilder": null
+    }
+  }
+}

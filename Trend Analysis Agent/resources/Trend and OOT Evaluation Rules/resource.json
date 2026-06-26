@@ -1,0 +1,25 @@
+{
+  "$resourceType": "context",
+  "name": "Trend and OOT Evaluation Rules",
+  "description": "Defines the approved rules for evaluating trends and out-of-trend (OOT) conditions across phases. Includes expected values, trend criteria, thresholds, and valid status outcomes (Pass, Watchlist, OOT) to be used during trend analysis.",
+  "folderPath": "solution_folder",
+  "indexName": "Trend and OOT Evaluation Rules",
+  "id": "625ecc69-7776-48f0-9147-31713f18a057",
+  "referenceKey": "0e55dfab-2bf0-49ea-c12c-08dec91deb9e",
+  "settings": {
+    "query": {
+      "description": "The query for the Semantic strategy.",
+      "variant": "dynamic"
+    },
+    "folderPathPrefix": {
+      "variant": "static"
+    },
+    "threshold": 0,
+    "resultCount": 3,
+    "retrievalMode": "semantic",
+    "fileExtension": {
+      "value": "All"
+    }
+  },
+  "contextType": "index"
+}

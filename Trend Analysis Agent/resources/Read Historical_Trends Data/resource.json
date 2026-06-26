@@ -1,0 +1,31 @@
+{
+  "$resourceType": "tool",
+  "id": "a5e005f9-b045-4cbf-8620-228c193cfcd6",
+  "referenceKey": "accd20b5-4720-425d-b864-09b1c8c035f9",
+  "name": "Read Historical_Trends Data",
+  "type": "process",
+  "description": "Retrieves a list of records for the selected Entity from Data Fabric, according to specified filters.",
+  "location": "solution",
+  "isEnabled": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "Records": {
+        "type": "string"
+      }
+    }
+  },
+  "settings": {},
+  "guardrail": {
+    "policies": []
+  },
+  "argumentProperties": {},
+  "properties": {
+    "processName": "Read Historical_Trends Data",
+    "folderPath": "solution_folder"
+  }
+}

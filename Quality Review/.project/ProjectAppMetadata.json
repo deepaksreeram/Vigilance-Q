@@ -1,0 +1,20 @@
+{
+  "ProjectAppMetadata": {
+    "QualityReviewFormPage_ProceedwithWatchlist_click.xaml": {
+      "AppFormId": "idc275082481f1413c915d91f5fc3052f9",
+      "IsAppQueryBuilder": null
+    },
+    "QualityReviewFormPage_EditGrid_source.xaml": {
+      "AppFormId": "idc275082481f1413c915d91f5fc3052f9",
+      "IsAppQueryBuilder": true
+    },
+    "QualityReviewFormPage_Proceed_click.xaml": {
+      "AppFormId": "idc275082481f1413c915d91f5fc3052f9",
+      "IsAppQueryBuilder": null
+    },
+    "QualityReviewFormPage_OnHold_click.xaml": {
+      "AppFormId": "idc275082481f1413c915d91f5fc3052f9",
+      "IsAppQueryBuilder": null
+    }
+  }
+}

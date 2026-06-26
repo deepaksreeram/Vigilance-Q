@@ -1,0 +1,38 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Recommendation Review Rules",
+    "kind": "index",
+    "apiVersion": "ecs.uipath.com/v2",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "Recommendation Review Rules",
+        "kind": "Bucket"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Recommendation Review Rules",
+      "description": "",
+      "storageBucketReference": {
+        "name": "Recommendation Review Rules",
+        "key": "7f4da7f6-a1b6-449e-a99e-13b950490a8e",
+        "folderKey": "807da034-7132-4f3e-a3ed-2849d65b8b22"
+      },
+      "fileNameGlob": "All",
+      "dataSourceType": "StorageBucket",
+      "includeSubfolders": true,
+      "ingestionType": "Advanced",
+      "encrypted": false
+    },
+    "locks": [],
+    "key": "a514ff54-7cc8-4d34-be37-08decbc1aecd"
+  }
+}

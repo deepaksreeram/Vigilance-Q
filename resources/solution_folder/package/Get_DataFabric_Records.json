@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Get DataFabric Records",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "6e32f36c-a095-48f3-8e7b-08d028ba2ea2",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Get DataFabric Records",
+      "description": null
+    },
+    "locks": [],
+    "key": "e7722521-fa70-42a4-8a02-99fd28990a3d"
+  }
+}

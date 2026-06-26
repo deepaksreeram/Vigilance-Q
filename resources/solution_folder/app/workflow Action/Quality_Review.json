@@ -1,0 +1,45 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Quality Review",
+    "kind": "app",
+    "type": "workflow Action",
+    "apiVersion": "apps.uipath.com/v1",
+    "projectKey": "318e3c7e-b14f-43ef-98e7-a766667061b0",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "Quality Review",
+        "kind": "appVersion"
+      },
+      {
+        "name": "Quality Review",
+        "kind": "process"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Quality Review",
+      "description": null,
+      "type": "workflow Action",
+      "version": null,
+      "appSystemName": null,
+      "appVersionRef": {
+        "key": "1e2793f2-15b7-465d-b20b-ca771273cac3"
+      },
+      "codeBehindProcess": {
+        "key": "d7a9f507-937a-4301-9af8-550a22a177c9"
+      },
+      "actionSchema": null,
+      "manualActivationActions": null
+    },
+    "locks": [],
+    "key": "f221b8e5-8a18-4dbf-968c-b00722bd57b0"
+  }
+}

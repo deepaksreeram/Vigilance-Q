@@ -1,0 +1,33 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "type": "agent",
+      "uniqueId": "49e2cc36-2226-410a-9c41-b511cd73992f",
+      "input": {
+        "type": "object",
+        "properties": {
+          "entityRecords": {
+            "type": "string",
+            "description": "A JSON string containing the array of quality records to validate. Each record must include: phase, batch_id, product_name, test_or_signal, and value. Provide as a stringified JSON array. Do not omit required fields."
+          },
+          "phase": {
+            "type": "string"
+          }
+        },
+        "title": "Inputs"
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "QualitySignalAnalysisOutput": {
+            "type": "string",
+            "description": "Output content"
+          }
+        }
+      }
+    }
+  ]
+}

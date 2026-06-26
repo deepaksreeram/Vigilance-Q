@@ -1,0 +1,6 @@
+{
+  "ProjectType": "Process",
+  "Name": "Batch Data Completeness Validation",
+  "Description": null,
+  "MainFile": "Main.xaml"
+}

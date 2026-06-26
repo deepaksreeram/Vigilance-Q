@@ -1,0 +1,25 @@
+{
+  "$resourceType": "context",
+  "name": "Pre_Manufacturing Readiness Rules",
+  "description": "Readiness requirements, warning thresholds, and conditional acceptance criteria for Pre-Manufacturing phase evaluation. Used to determine PASS or WATCHLIST status before manufacturing begins.",
+  "folderPath": "solution_folder",
+  "indexName": "Pre-Manufacturing Readiness Rules",
+  "id": "64fae24c-d9b7-473a-acce-b6c8e3dba85a",
+  "referenceKey": "8d4d34d3-c4ea-47ac-2151-08dec3046765",
+  "settings": {
+    "query": {
+      "description": "The query for the Semantic strategy.",
+      "variant": "dynamic"
+    },
+    "folderPathPrefix": {
+      "variant": "static"
+    },
+    "threshold": 0,
+    "resultCount": 3,
+    "retrievalMode": "semantic",
+    "fileExtension": {
+      "value": "All"
+    }
+  },
+  "contextType": "index"
+}

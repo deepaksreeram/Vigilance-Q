@@ -1,0 +1,38 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Final QC Specification Rules",
+    "kind": "index",
+    "apiVersion": "ecs.uipath.com/v2",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "Final QC Specification Rules",
+        "kind": "Bucket"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Final QC Specification Rules",
+      "description": "",
+      "storageBucketReference": {
+        "name": "Final QC Specification Rules",
+        "key": "944e3286-a118-4242-8e8c-079e27fc55b2",
+        "folderKey": "807da034-7132-4f3e-a3ed-2849d65b8b22"
+      },
+      "fileNameGlob": "All",
+      "dataSourceType": "StorageBucket",
+      "includeSubfolders": true,
+      "ingestionType": "Advanced",
+      "encrypted": false
+    },
+    "locks": [],
+    "key": "57ed08fe-38f1-4a11-478e-08dec68ee020"
+  }
+}

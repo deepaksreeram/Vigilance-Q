@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Verified Data Update to Data Fabric",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "c1e0726e-46fd-4370-9447-6a5580c0c91b",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Verified Data Update to Data Fabric",
+      "description": null
+    },
+    "locks": [],
+    "key": "65b7c367-c23c-4933-9be1-5bc5e36e652c"
+  }
+}

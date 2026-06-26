@@ -1,0 +1,129 @@
+{
+  "version": "3.0.0.0",
+  "bundleHash": "6Kk3jZqWbCd5YnfTuMwwCiCCfQ2eTDTQbaK83XeKU5k",
+  "addedAssemblyNames": [],
+  "discardedAssemblyNames": [
+    "Apps.action.gzq9L1bI3gg",
+    "Apps.action.gcQ29rlbI3gg",
+    "Apps.action.gDHZ9slbI3gg",
+    "Apps.action.gZrssu1bI3gg",
+    "Apps.action.girR8FbI3gg",
+    "Apps.action.g2g9B6lbI3gg",
+    "Apps.action.ghJAf8VbI3gg",
+    "Apps.action.gLXqe9FbI3gg",
+    "Apps.action.gRoHW1bI3gg",
+    "Apps.action.g4WimJVfI3gg",
+    "Apps.action.gtHHTLFfI3gg",
+    "Apps.form.MainPage.gmrRILVbI3gg",
+    "Apps.form.MainPage.Expressions.mRcis27ASMO1N8FqErQNPJ1",
+    "Apps.form.ActionSchemaPagePage.gd4sAl7I3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.p3Irt3rab6F1QGs384vGRGp2",
+    "Apps.form.MainPage.gyRT113I3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.pCikZ2OnCvF1trxwO1I3Gjy1",
+    "Apps.form.MainPage.Expressions.Z7CbJ45EdWO1QqTDa3Xn8Yj",
+    "Apps.form.ActionSchemaPagePage.g2p2A17I3gg",
+    "Apps.form.ActionSchemaPagePage.gKQbfH17I3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.ftW6I21i0jF1W7TPYdfSqf1",
+    "Apps.form.ActionSchemaPagePage.gKODfKl7I3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.mU8sW4Wa8AL1QrGAU23ATdE",
+    "Apps.form.ActionSchemaPagePage.Expressions.8jJjG1bcLDS1rEcGmvtul",
+    "Apps.form.ActionSchemaPagePage.Expressions.tHWr91VO26M1sgTfs36hGG83",
+    "Apps.form.ActionSchemaPagePage.gh5uCxl7I3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.3K0d63NrzgE1iYrnK3IB0Vq",
+    "DataService.gH0fxF7I3gg",
+    "Apps.form.ActionSchemaPagePage.gPiKcJH3I3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.8n2Ia4DIqPN1nTJYQ4o5Rjs2",
+    "Apps.form.ActionSchemaPagePage.gxqQbVX3I3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.DkQkXe06pC1m85RL19jn6B3",
+    "Apps.form.ActionSchemaPagePage.gbsyrNg3N3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.tz47I22ZDmO1QJkRs23LrvC",
+    "Apps.form.ActionSchemaPagePage.gmVI6bA3N3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.YSSem2V8YxH1Fq8lKxHI8n3",
+    "Apps.form.ActionSchemaPagePage.gdQwbg3N3gg",
+    "Apps.form.ActionSchemaPagePage.gZG4Og7N3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.j6ZZZ3AoUBJ16Hfdc2H5aEj2",
+    "Apps.form.ActionSchemaPagePage.gskpgnQ7N3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.7FkB61nSjoF1BB3Qa4ASJQH4"
+  ],
+  "discardedAssemblyReplacements": {
+    "Apps.action.gzq9L1bI3gg": "Apps.action.gxAwrMVfI3gg",
+    "Apps.action.gcQ29rlbI3gg": "Apps.action.gxAwrMVfI3gg",
+    "Apps.action.gDHZ9slbI3gg": "Apps.action.gxAwrMVfI3gg",
+    "Apps.action.gZrssu1bI3gg": "Apps.action.gxAwrMVfI3gg",
+    "Apps.action.girR8FbI3gg": "Apps.action.gxAwrMVfI3gg",
+    "Apps.action.g2g9B6lbI3gg": "Apps.action.gxAwrMVfI3gg",
+    "Apps.action.ghJAf8VbI3gg": "Apps.action.gxAwrMVfI3gg",
+    "Apps.action.gLXqe9FbI3gg": "Apps.action.gxAwrMVfI3gg",
+    "Apps.action.gRoHW1bI3gg": "Apps.action.gxAwrMVfI3gg",
+    "Apps.action.g4WimJVfI3gg": "Apps.action.gxAwrMVfI3gg",
+    "Apps.action.gtHHTLFfI3gg": "Apps.action.gxAwrMVfI3gg",
+    "Apps.form.ActionSchemaPagePage.gd4sAl7I3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "Apps.form.ActionSchemaPagePage.gxqQbVX3I3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "Apps.form.ActionSchemaPagePage.gbsyrNg3N3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "Apps.form.ActionSchemaPagePage.gmVI6bA3N3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "Apps.form.ActionSchemaPagePage.gdQwbg3N3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "Apps.form.ActionSchemaPagePage.gZG4Og7N3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "Apps.form.ActionSchemaPagePage.gskpgnQ7N3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "Apps.form.ActionSchemaPagePage.g2p2A17I3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "Apps.form.ActionSchemaPagePage.gKQbfH17I3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "Apps.form.ActionSchemaPagePage.gKODfKl7I3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "Apps.form.ActionSchemaPagePage.gh5uCxl7I3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "DataService.gH0fxF7I3gg": "DataService.DataService.Entities",
+    "Apps.form.ActionSchemaPagePage.gPiKcJH3I3gg": "Apps.form.ActionSchemaPagePage.gnZnzrLvN3gg",
+    "DataService.ge4oXNg3N3gg": "DataService.DataService.Entities"
+  },
+  "assembliesJitInfo": {
+    "DataService.gH0fxF7I3gg": {
+      "createdAt": "2026-06-12T14:14:08.4011052+05:30",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "Evidence",
+        "SystemUser",
+        "UserType"
+      ]
+    },
+    "DataService.gnJpmUn3I3gg": {
+      "createdAt": "2026-06-12T12:22:51.3178047+00:00",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "LIMS",
+        "Evidence",
+        "Phases",
+        "SystemUser",
+        "Product",
+        "TestSignal",
+        "UserType"
+      ]
+    },
+    "DataService.ge4oXNg3N3gg": {
+      "createdAt": "2026-06-18T13:12:56.5651735+05:30",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "Evidence",
+        "LIMS",
+        "SystemUser",
+        "Phases",
+        "Product",
+        "TestSignal",
+        "UserType"
+      ]
+    },
+    "DataService.DataService.Entities": {
+      "createdAt": "2026-06-26T05:40:21.5626809+00:00",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "Evidence",
+        "LIMS",
+        "SystemUser",
+        "Phases",
+        "Product",
+        "TestSignal",
+        "UserType"
+      ]
+    }
+  }
+}

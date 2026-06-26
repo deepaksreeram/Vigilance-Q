@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Vigilance Q Agentic case",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "80a4fda3-a92a-4373-af7b-9476bcf08486",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Vigilance Q Agentic case",
+      "description": null
+    },
+    "locks": [],
+    "key": "986dddcb-cc99-4a20-97b3-152c01dadbbf"
+  }
+}

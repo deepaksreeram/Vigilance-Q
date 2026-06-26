@@ -1,0 +1,51 @@
+{
+  "fileName": "evaluation-set-default.json",
+  "id": "2b93d033-690e-4fd5-b2f4-0bfa22270107",
+  "name": "Default Evaluation Set",
+  "batchSize": 10,
+  "evaluatorRefs": [
+    "4bf4ebb5-04ed-416f-b4bf-65b961df2bcf"
+  ],
+  "evaluations": [
+    {
+      "id": "055cb585-f745-4b26-af8e-f659748bb42f",
+      "name": "From Agent run - Recommendation Agent",
+      "inputs": {},
+      "expectedOutput": {
+        "recommendation_summary": "rule_id: \"REC-003\"\nrisk_level: \"Critical\"\nrecommendation_summary: \"Rule REC-003 matched because the overall evidence set contains multiple Watchlist records and OOT signals, and the retrieved evidence set is complete for evaluation. The recommendation outcome from REC-003 is to recommend hold and open Phase I Investigation.\""
+      },
+      "expectedAgentBehavior": "",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "evalSetId": "2b93d033-690e-4fd5-b2f4-0bfa22270107",
+      "createdAt": "2026-06-18T04:52:51.291Z",
+      "updatedAt": "2026-06-18T04:52:51.291Z",
+      "source": "debugRun"
+    },
+    {
+      "id": "d9e740f4-4906-4ebe-8940-0ede0c5c78e4",
+      "name": "From Agent run - Recommendation Agent",
+      "inputs": {},
+      "expectedOutput": {
+        "recommendation_summary": "rule_id: REC-003\nrisk_level: Critical\nrecommendation_summary: The evidence set is complete and contains multiple Watchlist signals together with OOT signals in Final QC trend evaluations. Recommend Hold and open Phase I Investigation."
+      },
+      "expectedAgentBehavior": "",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "evalSetId": "2b93d033-690e-4fd5-b2f4-0bfa22270107",
+      "createdAt": "2026-06-18T05:04:01.951Z",
+      "updatedAt": "2026-06-18T05:04:01.951Z",
+      "source": "debugRun"
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2026-06-17T05:39:53.057Z",
+  "updatedAt": "2026-06-18T05:04:01.951Z",
+  "agentMemoryEnabled": false,
+  "agentMemorySettings": [],
+  "lineByLineEvaluation": false
+}

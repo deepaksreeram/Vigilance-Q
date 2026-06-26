@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Recommendation Agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "537b7ff2-f1e0-436a-89d9-b3f5cdea0783",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Recommendation Agent",
+      "description": null
+    },
+    "locks": [],
+    "key": "454cf0e1-dd20-40c2-8f22-db44a3866969"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "Main.xaml": [
+    {
+      "FullName": null,
+      "ActivityIdRef": "LogMessage_1",
+      "IsCollapsed": false,
+      "IsEnabled": true,
+      "RequiresConfiguration": false,
+      "PropertiesBackendMetadata": [
+        {
+          "PropertyName": "Message",
+          "RenderType": 3,
+          "Widget": null,
+          "Conversion": null
+        }
+      ],
+      "Status": 0
+    }
+  ]
+}

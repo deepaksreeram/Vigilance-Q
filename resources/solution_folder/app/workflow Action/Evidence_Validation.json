@@ -1,0 +1,45 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Evidence Validation",
+    "kind": "app",
+    "type": "workflow Action",
+    "apiVersion": "apps.uipath.com/v1",
+    "projectKey": "7c95ad3c-c429-4ed4-b71e-52bb21f77f81",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "Evidence Validation",
+        "kind": "appVersion"
+      },
+      {
+        "name": "Evidence Validation",
+        "kind": "process"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Evidence Validation",
+      "description": null,
+      "type": "workflow Action",
+      "version": null,
+      "appSystemName": null,
+      "appVersionRef": {
+        "key": "06249fe3-1ef8-40d8-9254-aa7a57495e65"
+      },
+      "codeBehindProcess": {
+        "key": "3b4544c7-e72a-4682-bf9b-09777d256959"
+      },
+      "actionSchema": null,
+      "manualActivationActions": null
+    },
+    "locks": [],
+    "key": "e10b4af0-1095-41f6-ad55-d0c4c07cf077"
+  }
+}

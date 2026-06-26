@@ -1,0 +1,25 @@
+{
+  "$resourceType": "context",
+  "name": "In_Process QC Rules",
+  "description": "Operating limits, warning limits, and drift criteria for In-Process phase evaluation. Used to determine PASS or WATCHLIST status during active manufacturing.",
+  "folderPath": "solution_folder",
+  "indexName": "In-Process QC Rules",
+  "id": "a7bc7881-62ba-45bb-88ce-0ed83fd9ffb6",
+  "referenceKey": "577afd67-2488-4887-1f62-08dec2e15f21",
+  "settings": {
+    "query": {
+      "description": "The query for the Semantic strategy.",
+      "variant": "dynamic"
+    },
+    "folderPathPrefix": {
+      "variant": "static"
+    },
+    "threshold": 0,
+    "resultCount": 3,
+    "retrievalMode": "semantic",
+    "fileExtension": {
+      "value": "All"
+    }
+  },
+  "contextType": "index"
+}

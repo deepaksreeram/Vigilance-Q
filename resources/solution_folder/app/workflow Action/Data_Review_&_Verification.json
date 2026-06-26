@@ -1,0 +1,44 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Data Review \u0026 Verification",
+    "kind": "app",
+    "type": "workflow Action",
+    "apiVersion": "apps.uipath.com/v1",
+    "projectKey": "4fb90a9b-5172-480a-b151-995e84279169",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "Data Review \u0026 Verification",
+        "kind": "appVersion"
+      },
+      {
+        "name": "Data Review \u0026 Verification",
+        "kind": "process"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Data Review \u0026 Verification",
+      "description": null,
+      "type": "workflow Action",
+      "version": null,
+      "appSystemName": null,
+      "appVersionRef": {
+        "key": "00f89e84-c040-4475-96dc-ff3ff93db59f"
+      },
+      "codeBehindProcess": {
+        "key": "cadac012-ccdb-4bf3-bde3-db2c712b693a"
+      },
+      "actionSchema": null
+    },
+    "locks": [],
+    "key": "ea09c7d4-1e36-441a-9235-c2b7601cc72d"
+  }
+}

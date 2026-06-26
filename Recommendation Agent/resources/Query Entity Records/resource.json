@@ -1,0 +1,1324 @@
+{
+  "$resourceType": "tool",
+  "name": "Query Entity Records",
+  "description": "Retrieves a list of records for the selected Entity from Data Fabric, according to specified filters.",
+  "location": "external",
+  "type": "integration",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "entityName": {
+        "type": "string",
+        "title": "Entity",
+        "description": "Enter entity name",
+        "enum": [
+          "Evidence"
+        ]
+      },
+      "queryExpression": {
+        "type": "string",
+        "title": "Query",
+        "description": "Enter CEQL query to filter entity records",
+        "dependentSchemas": {
+          "entityName": {
+            "if": {
+              "properties": {
+                "entityName": {
+                  "enum": [
+                    "*"
+                  ]
+                }
+              },
+              "required": [
+                "entityName"
+              ]
+            },
+            "then": {},
+            "else": {
+              "not": {}
+            }
+          }
+        }
+      },
+      "start": {
+        "type": "integer",
+        "title": "Skip",
+        "description": "Specify the number of records to skip from the start"
+      },
+      "limit": {
+        "type": "integer",
+        "title": "Top",
+        "description": "Specify number of records to return at most. Range: 1-1000. Default: 100."
+      },
+      "expansionLevel": {
+        "type": "integer",
+        "title": "Related record depth",
+        "description": "Specify the depth of related records to be retrieved from the service. Range: 1-3. Default: 3."
+      },
+      "isAscending": {
+        "type": "boolean",
+        "title": "Sort ascending",
+        "description": "Specify whether to sort in ascending (true) or descending (false) order"
+      },
+      "_sortFieldName": {
+        "type": "string",
+        "title": "Sort by field",
+        "description": "Specify the field to sort the results by",
+        "oneOf": [
+          {
+            "const": "evidenceid",
+            "title": "evidenceid"
+          },
+          {
+            "const": "recordid",
+            "title": "recordid"
+          },
+          {
+            "const": "phase",
+            "title": "phase"
+          },
+          {
+            "const": "batchid",
+            "title": "batchid"
+          },
+          {
+            "const": "productname",
+            "title": "productname"
+          },
+          {
+            "const": "testorsignal",
+            "title": "testorsignal"
+          },
+          {
+            "const": "actualvalue",
+            "title": "actualvalue"
+          },
+          {
+            "const": "expectedvalue",
+            "title": "expectedvalue"
+          },
+          {
+            "const": "ruleid",
+            "title": "ruleid"
+          },
+          {
+            "const": "status",
+            "title": "status"
+          },
+          {
+            "const": "evidencesource",
+            "title": "evidencesource"
+          },
+          {
+            "const": "executionagent",
+            "title": "executionagent"
+          },
+          {
+            "const": "reason",
+            "title": "reason"
+          },
+          {
+            "const": "CreateTime",
+            "title": "CreateTime"
+          },
+          {
+            "const": "UpdateTime",
+            "title": "UpdateTime"
+          },
+          {
+            "const": "Id",
+            "title": "Id"
+          }
+        ],
+        "enum": [
+          "evidenceid",
+          "recordid",
+          "phase",
+          "batchid",
+          "productname",
+          "testorsignal",
+          "actualvalue",
+          "expectedvalue",
+          "ruleid",
+          "status",
+          "evidencesource",
+          "executionagent",
+          "reason",
+          "CreateTime",
+          "UpdateTime",
+          "Id"
+        ]
+      },
+      "evidencesource": {
+        "type": "string",
+        "title": "evidencesource",
+        "description": "evidencesource"
+      },
+      "reason": {
+        "type": "string",
+        "title": "reason",
+        "description": "reason"
+      },
+      "UpdatedBy": {
+        "type": "object",
+        "properties": {
+          "UpdateTime": {
+            "type": "string",
+            "title": "UpdatedBy.UpdateTime",
+            "description": "UpdatedBy.UpdateTime"
+          },
+          "Name": {
+            "type": "string",
+            "title": "UpdatedBy.Name",
+            "description": "UpdatedBy.Name"
+          },
+          "Id": {
+            "type": "string",
+            "title": "UpdatedBy.Id",
+            "description": "UpdatedBy.Id"
+          },
+          "CreateTime": {
+            "type": "string",
+            "title": "UpdatedBy.CreateTime",
+            "description": "UpdatedBy.CreateTime"
+          },
+          "IsActive": {
+            "type": "boolean",
+            "title": "UpdatedBy.IsActive",
+            "description": "UpdatedBy.IsActive"
+          },
+          "Type": {
+            "type": "integer",
+            "title": "UpdatedBy.Type",
+            "description": "UpdatedBy.Type"
+          },
+          "Email": {
+            "type": "string",
+            "title": "UpdatedBy.Email",
+            "description": "UpdatedBy.Email"
+          }
+        }
+      },
+      "testorsignal": {
+        "type": "string",
+        "title": "testorsignal",
+        "description": "testorsignal"
+      },
+      "CreatedBy": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "integer",
+            "title": "CreatedBy.Type",
+            "description": "CreatedBy.Type"
+          },
+          "UpdateTime": {
+            "type": "string",
+            "title": "CreatedBy.UpdateTime",
+            "description": "CreatedBy.UpdateTime"
+          },
+          "Id": {
+            "type": "string",
+            "title": "CreatedBy.Id",
+            "description": "CreatedBy.Id"
+          },
+          "Name": {
+            "type": "string",
+            "title": "CreatedBy.Name",
+            "description": "CreatedBy.Name"
+          },
+          "Email": {
+            "type": "string",
+            "title": "CreatedBy.Email",
+            "description": "CreatedBy.Email"
+          },
+          "CreateTime": {
+            "type": "string",
+            "title": "CreatedBy.CreateTime",
+            "description": "CreatedBy.CreateTime"
+          },
+          "IsActive": {
+            "type": "boolean",
+            "title": "CreatedBy.IsActive",
+            "description": "CreatedBy.IsActive"
+          }
+        }
+      },
+      "actualvalue": {
+        "type": "string",
+        "title": "actualvalue",
+        "description": "actualvalue"
+      },
+      "evidenceid": {
+        "type": "string",
+        "title": "evidenceid",
+        "description": "evidenceid"
+      },
+      "productname": {
+        "type": "string",
+        "title": "productname",
+        "description": "productname"
+      },
+      "executionagent": {
+        "type": "string",
+        "title": "executionagent",
+        "description": "executionagent"
+      },
+      "expectedvalue": {
+        "type": "string",
+        "title": "expectedvalue",
+        "description": "expectedvalue"
+      },
+      "phase": {
+        "type": "string",
+        "title": "phase",
+        "description": "phase"
+      },
+      "CreateTime": {
+        "type": "string",
+        "title": "CreateTime",
+        "description": "CreateTime"
+      },
+      "batchid": {
+        "type": "string",
+        "title": "batchid",
+        "description": "batchid"
+      },
+      "recordid": {
+        "type": "string",
+        "title": "recordid",
+        "description": "recordid"
+      },
+      "UpdateTime": {
+        "type": "string",
+        "title": "UpdateTime",
+        "description": "UpdateTime"
+      },
+      "Id": {
+        "type": "string",
+        "title": "Id",
+        "description": "Id"
+      },
+      "ruleid": {
+        "type": "string",
+        "title": "ruleid",
+        "description": "ruleid"
+      },
+      "status": {
+        "type": "string",
+        "title": "status",
+        "description": "status"
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "entityName"
+    ]
+  },
+  "outputSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "array",
+    "properties": {},
+    "definitions": {
+      "root": {
+        "type": "object",
+        "properties": {
+          "evidencesource": {
+            "title": "Evidencesource",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          },
+          "UpdatedBy": {
+            "title": "Updated by",
+            "$ref": "#/definitions/UpdatedBy"
+          },
+          "testorsignal": {
+            "title": "Testorsignal",
+            "type": "string"
+          },
+          "CreatedBy": {
+            "title": "Created by",
+            "$ref": "#/definitions/CreatedBy"
+          },
+          "actualvalue": {
+            "title": "Actualvalue",
+            "type": "string"
+          },
+          "evidenceid": {
+            "title": "Evidenceid",
+            "type": "string"
+          },
+          "productname": {
+            "title": "Productname",
+            "type": "string"
+          },
+          "executionagent": {
+            "title": "Executionagent",
+            "type": "string"
+          },
+          "expectedvalue": {
+            "title": "Expectedvalue",
+            "type": "string"
+          },
+          "phase": {
+            "title": "Phase",
+            "type": "string"
+          },
+          "CreateTime": {
+            "title": "Create time",
+            "type": "string"
+          },
+          "batchid": {
+            "title": "Batchid",
+            "type": "string"
+          },
+          "recordid": {
+            "title": "Recordid",
+            "type": "string"
+          },
+          "UpdateTime": {
+            "title": "Update time",
+            "type": "string"
+          },
+          "Id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "ruleid": {
+            "title": "Ruleid",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        }
+      },
+      "UpdatedBy": {
+        "type": "object",
+        "properties": {
+          "UpdateTime": {
+            "title": "Updated by update time",
+            "type": "string"
+          },
+          "Name": {
+            "title": "Updated by name",
+            "type": "string"
+          },
+          "Id": {
+            "title": "Updated by ID",
+            "type": "string"
+          },
+          "CreateTime": {
+            "title": "Updated by create time",
+            "type": "string"
+          },
+          "IsActive": {
+            "title": "Updated by is active",
+            "type": "boolean"
+          },
+          "Type": {
+            "title": "Updated by type",
+            "type": "integer"
+          },
+          "Email": {
+            "title": "Updated by email",
+            "type": "string"
+          }
+        }
+      },
+      "CreatedBy": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "title": "Created by type",
+            "type": "integer"
+          },
+          "UpdateTime": {
+            "title": "Created by update time",
+            "type": "string"
+          },
+          "Id": {
+            "title": "Created by ID",
+            "type": "string"
+          },
+          "Name": {
+            "title": "Created by name",
+            "type": "string"
+          },
+          "Email": {
+            "title": "Created by email",
+            "type": "string"
+          },
+          "CreateTime": {
+            "title": "Created by create time",
+            "type": "string"
+          },
+          "IsActive": {
+            "title": "Created by is active",
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "items": {
+      "$ref": "#/definitions/root"
+    }
+  },
+  "settings": {},
+  "properties": {
+    "toolPath": "/v2/{entityName}/qer",
+    "objectName": "QueryEntityRecordsCurated",
+    "toolDisplayName": "Query Entity Records",
+    "toolDescription": "Retrieves a list of records for the selected Entity from Data Fabric, according to specified filters.",
+    "method": "POST",
+    "connection": {
+      "id": "ea7e82c2-63b6-4442-9664-f0aeb507b802",
+      "name": "deepak.s@boundaryless.com",
+      "elementInstanceId": 0,
+      "apiBaseUri": "",
+      "state": "enabled",
+      "isDefault": false,
+      "connector": {
+        "key": "uipath-uipath-dataservice",
+        "name": "UiPath Data Fabric",
+        "image": "https://staging.uipath.com/elements_/scaleunit_/4a9b6040-645f-4006-a000-829794b794d4/v3/element/elements/uipath-uipath-dataservice/image",
+        "enabled": true
+      },
+      "folder": {
+        "key": "807da034-7132-4f3e-a3ed-2849d65b8b22",
+        "path": "807da034-7132-4f3e-a3ed-2849d65b8b22"
+      },
+      "solutionProperties": {
+        "resourceKey": "ea7e82c2-63b6-4442-9664-f0aeb507b802"
+      }
+    },
+    "parameters": [
+      {
+        "name": "evidencesource",
+        "displayName": "evidencesource",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "evidencesource",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "reason",
+        "displayName": "reason",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "reason",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "UpdatedBy.UpdateTime",
+        "displayName": "UpdatedBy.UpdateTime",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "UpdatedBy.UpdateTime",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "UpdatedBy.Name",
+        "displayName": "UpdatedBy.Name",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "UpdatedBy.Name",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "testorsignal",
+        "displayName": "testorsignal",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "testorsignal",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "CreatedBy.Type",
+        "displayName": "CreatedBy.Type",
+        "type": "integer",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "CreatedBy.Type",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": [
+          {
+            "name": "Application",
+            "value": 3
+          },
+          {
+            "name": "Group",
+            "value": 1
+          },
+          {
+            "name": "Robot",
+            "value": 2
+          },
+          {
+            "name": "User",
+            "value": 0
+          }
+        ],
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "actualvalue",
+        "displayName": "actualvalue",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "actualvalue",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "CreatedBy.UpdateTime",
+        "displayName": "CreatedBy.UpdateTime",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "CreatedBy.UpdateTime",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "CreatedBy.Id",
+        "displayName": "CreatedBy.Id",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "CreatedBy.Id",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "UpdatedBy.Id",
+        "displayName": "UpdatedBy.Id",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "UpdatedBy.Id",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "UpdatedBy.CreateTime",
+        "displayName": "UpdatedBy.CreateTime",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "UpdatedBy.CreateTime",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "evidenceid",
+        "displayName": "evidenceid",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "evidenceid",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "CreatedBy.Name",
+        "displayName": "CreatedBy.Name",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "CreatedBy.Name",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "productname",
+        "displayName": "productname",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "productname",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "executionagent",
+        "displayName": "executionagent",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "executionagent",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "expectedvalue",
+        "displayName": "expectedvalue",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "expectedvalue",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "phase",
+        "displayName": "phase",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "phase",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "CreateTime",
+        "displayName": "CreateTime",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "CreateTime",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "CreatedBy.Email",
+        "displayName": "CreatedBy.Email",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "CreatedBy.Email",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "batchid",
+        "displayName": "batchid",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "batchid",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "CreatedBy.CreateTime",
+        "displayName": "CreatedBy.CreateTime",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "CreatedBy.CreateTime",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "UpdatedBy.IsActive",
+        "displayName": "UpdatedBy.IsActive",
+        "type": "boolean",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "UpdatedBy.IsActive",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "recordid",
+        "displayName": "recordid",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "recordid",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "UpdatedBy.Type",
+        "displayName": "UpdatedBy.Type",
+        "type": "integer",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "UpdatedBy.Type",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": [
+          {
+            "name": "Application",
+            "value": 3
+          },
+          {
+            "name": "Group",
+            "value": 1
+          },
+          {
+            "name": "Robot",
+            "value": 2
+          },
+          {
+            "name": "User",
+            "value": 0
+          }
+        ],
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "UpdatedBy.Email",
+        "displayName": "UpdatedBy.Email",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "UpdatedBy.Email",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "CreatedBy.IsActive",
+        "displayName": "CreatedBy.IsActive",
+        "type": "boolean",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "CreatedBy.IsActive",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "UpdateTime",
+        "displayName": "UpdateTime",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "UpdateTime",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "Id",
+        "displayName": "Id",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "Id",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "ruleid",
+        "displayName": "ruleid",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "ruleid",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "status",
+        "displayName": "status",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "status",
+        "position": "secondary",
+        "sortOrder": 0,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "entityName",
+        "displayName": "Entity",
+        "type": "string",
+        "fieldLocation": "path",
+        "value": "Evidence",
+        "description": "Enter entity name",
+        "position": "primary",
+        "sortOrder": 1,
+        "required": true,
+        "fieldVariant": "static",
+        "dynamic": false,
+        "isCascading": true,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": true,
+        "dynamicBehavior": [],
+        "reference": {
+          "objectName": "system",
+          "lookupNames": [
+            "displayName"
+          ],
+          "lookupValue": "name",
+          "path": "/standard-objects"
+        },
+        "displayValue": "Evidence"
+      },
+      {
+        "name": "queryExpression",
+        "displayName": "Query",
+        "type": "string",
+        "fieldLocation": "query",
+        "value": "{{prompt}}",
+        "description": "Enter CEQL query to filter entity records",
+        "componentType": "FilterBuilder",
+        "position": "primary",
+        "sortOrder": 2,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "dynamic": true,
+        "isCascading": false,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [
+          {
+            "action": "hide",
+            "priority": 2,
+            "conditions": [
+              {
+                "fieldName": "entityName",
+                "values": [],
+                "matchesWhenEmpty": true
+              }
+            ]
+          },
+          {
+            "action": "show",
+            "priority": 3,
+            "conditions": [
+              {
+                "fieldName": "entityName",
+                "values": [
+                  "*"
+                ],
+                "matchesWhenEmpty": false
+              }
+            ]
+          }
+        ],
+        "reference": null
+      },
+      {
+        "name": "start",
+        "displayName": "Skip",
+        "type": "integer",
+        "fieldLocation": "query",
+        "value": "{{prompt}}",
+        "description": "Specify the number of records to skip from the start",
+        "position": "secondary",
+        "sortOrder": 3,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "dynamic": true,
+        "isCascading": false,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "limit",
+        "displayName": "Top",
+        "type": "integer",
+        "fieldLocation": "query",
+        "value": "{{prompt}}",
+        "description": "Specify number of records to return at most. Range: 1-1000. Default: 100.",
+        "position": "secondary",
+        "sortOrder": 4,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "dynamic": true,
+        "isCascading": false,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "expansionLevel",
+        "displayName": "Related record depth",
+        "type": "integer",
+        "fieldLocation": "query",
+        "value": "{{prompt}}",
+        "description": "Specify the depth of related records to be retrieved from the service. Range: 1-3. Default: 3.",
+        "position": "secondary",
+        "sortOrder": 5,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "dynamic": true,
+        "isCascading": false,
+        "enumValues": [
+          {
+            "value": 1,
+            "name": "1"
+          },
+          {
+            "value": 2,
+            "name": "2"
+          },
+          {
+            "value": 3,
+            "name": "3"
+          }
+        ],
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "isAscending",
+        "displayName": "Sort ascending",
+        "type": "boolean",
+        "fieldLocation": "query",
+        "value": "{{prompt}}",
+        "description": "Specify whether to sort in ascending (true) or descending (false) order",
+        "position": "secondary",
+        "sortOrder": 6,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "dynamic": true,
+        "isCascading": false,
+        "enumValues": null,
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      },
+      {
+        "name": "_sortFieldName",
+        "displayName": "Sort by field",
+        "type": "string",
+        "fieldLocation": "body",
+        "value": "{{prompt}}",
+        "description": "Specify the field to sort the results by",
+        "position": "secondary",
+        "sortOrder": 7,
+        "required": false,
+        "fieldVariant": "dynamic",
+        "isCascading": false,
+        "dynamic": true,
+        "enumValues": [
+          {
+            "name": "evidenceid",
+            "value": "evidenceid"
+          },
+          {
+            "name": "recordid",
+            "value": "recordid"
+          },
+          {
+            "name": "phase",
+            "value": "phase"
+          },
+          {
+            "name": "batchid",
+            "value": "batchid"
+          },
+          {
+            "name": "productname",
+            "value": "productname"
+          },
+          {
+            "name": "testorsignal",
+            "value": "testorsignal"
+          },
+          {
+            "name": "actualvalue",
+            "value": "actualvalue"
+          },
+          {
+            "name": "expectedvalue",
+            "value": "expectedvalue"
+          },
+          {
+            "name": "ruleid",
+            "value": "ruleid"
+          },
+          {
+            "name": "status",
+            "value": "status"
+          },
+          {
+            "name": "evidencesource",
+            "value": "evidencesource"
+          },
+          {
+            "name": "executionagent",
+            "value": "executionagent"
+          },
+          {
+            "name": "reason",
+            "value": "reason"
+          },
+          {
+            "name": "CreateTime",
+            "value": "CreateTime"
+          },
+          {
+            "name": "UpdateTime",
+            "value": "UpdateTime"
+          },
+          {
+            "name": "Id",
+            "value": "Id"
+          }
+        ],
+        "loadReferenceOptionsByDefault": null,
+        "dynamicBehavior": [],
+        "reference": null
+      }
+    ],
+    "bodyStructure": {
+      "contentType": "json"
+    }
+  },
+  "guardrail": {
+    "policies": []
+  },
+  "iconUrl": "https://staging.uipath.com/elements_/scaleunit_/4a9b6040-645f-4006-a000-829794b794d4/v3/element/elements/uipath-uipath-dataservice/image",
+  "id": "0846ec75-b2c8-4709-a2a6-fd69b402624c",
+  "isPreview": true,
+  "isEnabled": true
+}

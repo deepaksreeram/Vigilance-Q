@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Quality Signal Analysis Agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "0ce0496b-a855-4d11-a83f-9e9d49cb57b3",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Quality Signal Analysis Agent",
+      "description": null
+    },
+    "locks": [],
+    "key": "cfc68386-1155-4b71-85b8-ae27d0a158e9"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Data Review \u0026 Verification",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "4fb90a9b-5172-480a-b151-995e84279169",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Data Review \u0026 Verification",
+      "description": null
+    },
+    "locks": [],
+    "key": "f7d141e6-1d6b-46ab-9fac-2641374b27ac"
+  }
+}

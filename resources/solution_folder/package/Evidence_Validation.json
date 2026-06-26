@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Evidence Validation",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "7c95ad3c-c429-4ed4-b71e-52bb21f77f81",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Evidence Validation",
+      "description": null
+    },
+    "locks": [],
+    "key": "7fc04920-cfb7-4c5e-bd48-b44119e78c59"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "ProjectType": "WebApp",
+  "WebAppSettings": {
+    "AppId": "IDc00f820ad1c44b9bbeeb6aa3aeddc006",
+    "IsCoreProject": true
+  },
+  "Name": "Data Review & Verification",
+  "Description": null,
+  "MainFile": "Main.xaml"
+}

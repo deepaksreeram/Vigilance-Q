@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Read Historical_Trends Data",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "20c7fb4b-fdc3-477b-a22a-8f5f3de728a3",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Read Historical_Trends Data",
+      "description": null
+    },
+    "locks": [],
+    "key": "8b2ebef4-daf1-458d-b7a3-0a8b63c53f9c"
+  }
+}

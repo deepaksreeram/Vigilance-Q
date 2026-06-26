@@ -1,0 +1,73 @@
+{
+  "DocVersion": "1.0.0",
+  "StudioMinVersion": "2025.04.0",
+  "SolutionId": "ce2b10b7-b2e0-46d2-0642-08decb84da6c",
+  "Projects": [
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "Read Historical_Trends Data/project.uiproj",
+      "Id": "20c7fb4b-fdc3-477b-a22a-8f5f3de728a3"
+    },
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "Process Agent Response and Update Evidence/project.uiproj",
+      "Id": "3d31aef2-7767-4c8e-9c13-ae3e39d749af"
+    },
+    {
+      "Type": "WebApp",
+      "ProjectRelativePath": "Data Review & Verification/project.uiproj",
+      "Id": "4fb90a9b-5172-480a-b151-995e84279169"
+    },
+    {
+      "Type": "CaseManagement",
+      "ProjectRelativePath": "Vigilance Q Agentic case/project.uiproj",
+      "Id": "80a4fda3-a92a-4373-af7b-9476bcf08486"
+    },
+    {
+      "Type": "Agent",
+      "ProjectRelativePath": "Trend Analysis Agent/project.uiproj",
+      "Id": "ece962ba-f7ae-4fcd-8ee6-6367469c957f"
+    },
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "Get DataFabric Records/project.uiproj",
+      "Id": "6e32f36c-a095-48f3-8e7b-08d028ba2ea2"
+    },
+    {
+      "Type": "Agent",
+      "ProjectRelativePath": "Recommendation Agent/project.uiproj",
+      "Id": "537b7ff2-f1e0-436a-89d9-b3f5cdea0783"
+    },
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "Verified Data Update to Data Fabric/project.uiproj",
+      "Id": "c1e0726e-46fd-4370-9447-6a5580c0c91b"
+    },
+    {
+      "Type": "WebApp",
+      "ProjectRelativePath": "Quality Review/project.uiproj",
+      "Id": "318e3c7e-b14f-43ef-98e7-a766667061b0"
+    },
+    {
+      "Type": "Agent",
+      "ProjectRelativePath": "Quality Signal Analysis Agent/project.uiproj",
+      "Id": "0ce0496b-a855-4d11-a83f-9e9d49cb57b3"
+    },
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "Batch Data Completeness Validation/project.uiproj",
+      "Id": "85c5e64c-b61a-4252-8ce5-90837364a940"
+    },
+    {
+      "Type": "WebApp",
+      "ProjectRelativePath": "Evidence Validation/project.uiproj",
+      "Id": "7c95ad3c-c429-4ed4-b71e-52bb21f77f81"
+    },
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "DataFabric Metadata Parser/project.uiproj",
+      "Id": "3e30ff35-4639-476b-ae08-969a23a01509"
+    }
+  ],
+  "AutomationHubIdeaUrl": null
+}

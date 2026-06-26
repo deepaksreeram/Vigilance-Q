@@ -1,0 +1,74 @@
+{
+  "version": "3.0.0.0",
+  "bundleHash": "LDYSkEJYss9rDAVJ0Yj2gJKJJmMrCvu2sEvMrZEY",
+  "addedAssemblyNames": [],
+  "discardedAssemblyNames": [
+    "DataService.gaYgFU0vI3gg",
+    "DataService.grI9rVkvI3gg"
+  ],
+  "discardedAssemblyReplacements": {
+    "DataService.gaYgFU0vI3gg": "DataService.DataService.Entities",
+    "DataService.grI9rVkvI3gg": "DataService.DataService.Entities",
+    "DataService.gPfwLoP7M3gg": "DataService.DataService.Entities"
+  },
+  "assembliesJitInfo": {
+    "DataService.gaYgFU0vI3gg": {
+      "createdAt": "2026-06-12T06:24:57.6553674+00:00",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": []
+    },
+    "DataService.grI9rVkvI3gg": {
+      "createdAt": "2026-06-12T06:25:03.2179084+00:00",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "Evidence",
+        "SystemUser",
+        "UserType"
+      ]
+    },
+    "DataService.gBzoKe2I3gg": {
+      "createdAt": "2026-06-12T16:13:48.2106534+05:30",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "Evidence",
+        "LIMS",
+        "SystemUser",
+        "Phases",
+        "Product",
+        "TestSignal",
+        "UserType"
+      ]
+    },
+    "DataService.gPfwLoP7M3gg": {
+      "createdAt": "2026-06-18T11:28:32.5655865+05:30",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "LIMS",
+        "Evidence",
+        "Phases",
+        "SystemUser",
+        "Product",
+        "TestSignal",
+        "UserType"
+      ]
+    },
+    "DataService.DataService.Entities": {
+      "createdAt": "2026-06-26T05:40:21.3246924+00:00",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "LIMS",
+        "Evidence",
+        "Phases",
+        "SystemUser",
+        "Product",
+        "TestSignal",
+        "UserType"
+      ]
+    }
+  }
+}

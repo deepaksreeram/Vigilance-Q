@@ -1,0 +1,360 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "resource": "EventTrigger",
+      "key": "ea7e82c2-63b6-4442-9664-f0aeb507b802_trigger_1",
+      "id": "EventTriggerea7e82c2-63b6-4442-9664-f0aeb507b802_trigger_1",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "ea7e82c2-63b6-4442-9664-f0aeb507b802",
+          "isExpression": false
+        },
+        "EntryPointUniqueId": {
+          "defaultValue": "4296337b-7a3b-43fe-ab89-53dbea22dc3b",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "UseConnectionService": "true",
+        "Connector": "uipath-uipath-dataservice",
+        "ActivityName": "Record Created",
+        "BindingsVersion": "2.2",
+        "ObjectName": "LIMS",
+        "Operation": "CREATED",
+        "FilterExpression": "((testorsignal.testorsignal=='Batch Start'))"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "=bindings.bdPBEFtuX.Batch Data Completeness Validation",
+      "id": "process=bindings.bdPBEFtuX.Batch Data Completeness Validation",
+      "value": {
+        "folderPath": {
+          "defaultValue": "=bindings.bdPBEFtuX",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "Batch Data Completeness Validation",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Batch Data Completeness Validation",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "resource": "app",
+      "key": "=bindings.bMySylWr1.Data Review & Verification",
+      "id": "app=bindings.bMySylWr1.Data Review & Verification",
+      "value": {
+        "folderPath": {
+          "defaultValue": "=bindings.bMySylWr1",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "Data Review & Verification",
+          "isExpression": false,
+          "displayName": "App name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Data Review & Verification",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "=bindings.bQXD4g5xd.DataFabric Metadata Parser",
+      "id": "process=bindings.bQXD4g5xd.DataFabric Metadata Parser",
+      "value": {
+        "folderPath": {
+          "defaultValue": "=bindings.bQXD4g5xd",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "DataFabric Metadata Parser",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "DataFabric Metadata Parser",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "=bindings.bf90OaYDA.Verified Data Update to Data Fabric",
+      "id": "process=bindings.bf90OaYDA.Verified Data Update to Data Fabric",
+      "value": {
+        "folderPath": {
+          "defaultValue": "=bindings.bf90OaYDA",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "Verified Data Update to Data Fabric",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Verified Data Update to LIMS/DataFabric",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "=bindings.bmTfLxZJh.Get DataFabric Records",
+      "id": "process=bindings.bmTfLxZJh.Get DataFabric Records",
+      "value": {
+        "folderPath": {
+          "defaultValue": "=bindings.bmTfLxZJh",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "Get DataFabric Records",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Pre-Manufacturing Records",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "=bindings.bYvy4eL8V.Process Agent Response and Update Evidence",
+      "id": "process=bindings.bYvy4eL8V.Process Agent Response and Update Evidence",
+      "value": {
+        "folderPath": {
+          "defaultValue": "=bindings.bYvy4eL8V",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "Process Agent Response and Update Evidence",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Pre-Manufacturing Evidence",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "resource": "app",
+      "key": "=bindings.biTWraaJe.Evidence Validation",
+      "id": "app=bindings.biTWraaJe.Evidence Validation",
+      "value": {
+        "folderPath": {
+          "defaultValue": "=bindings.biTWraaJe",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "Evidence Validation",
+          "isExpression": false,
+          "displayName": "App name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Human Validation",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "Trend Analysis Agent",
+      "id": "processTrend Analysis Agent",
+      "value": {
+        "name": {
+          "defaultValue": "Trend Analysis Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "IP - Trend Analysis Agent",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "=bindings.b3esrLzuD.Quality Signal Analysis Agent",
+      "id": "process=bindings.b3esrLzuD.Quality Signal Analysis Agent",
+      "value": {
+        "folderPath": {
+          "defaultValue": "=bindings.b3esrLzuD",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "Quality Signal Analysis Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "IP - Quality Signal Analysis Agent",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "=bindings.bMvLGhCb0.Trend Analysis Agent",
+      "id": "process=bindings.bMvLGhCb0.Trend Analysis Agent",
+      "value": {
+        "folderPath": {
+          "defaultValue": "=bindings.bMvLGhCb0",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "Trend Analysis Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "PM - Trend Analysis Agent",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "=bindings.bBefP4Mwf.Quality Signal Analysis Agent",
+      "id": "process=bindings.bBefP4Mwf.Quality Signal Analysis Agent",
+      "value": {
+        "folderPath": {
+          "defaultValue": "=bindings.bBefP4Mwf",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "Quality Signal Analysis Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "PM - Quality Signal Analysis Agent",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "Recommendation Agent",
+      "id": "processRecommendation Agent",
+      "value": {
+        "name": {
+          "defaultValue": "Recommendation Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Recommendation Agent",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "resource": "app",
+      "key": "=bindings.bldfCxlTI.Quality Review",
+      "id": "app=bindings.bldfCxlTI.Quality Review",
+      "value": {
+        "folderPath": {
+          "defaultValue": "=bindings.bldfCxlTI",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "Quality Review",
+          "isExpression": false,
+          "displayName": "App name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Human Final Stage Review",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "resource": "Connection",
+      "key": "ea7e82c2-63b6-4442-9664-f0aeb507b802",
+      "id": "Connectionea7e82c2-63b6-4442-9664-f0aeb507b802",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "ea7e82c2-63b6-4442-9664-f0aeb507b802",
+          "isExpression": false,
+          "displayName": "uipath-uipath-dataservice connection"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Record Created",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "uipath-uipath-dataservice connection",
+        "UseConnectionService": "true",
+        "Connector": "uipath-uipath-dataservice"
+      }
+    },
+    {
+      "resource": "Connection",
+      "key": "d2fd20b5-76de-4697-b6eb-a3dc2f6aefdc",
+      "id": "Connectiond2fd20b5-76de-4697-b6eb-a3dc2f6aefdc",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "d2fd20b5-76de-4697-b6eb-a3dc2f6aefdc",
+          "isExpression": false,
+          "displayName": "uipath-microsoft-outlook365 connection"
+        }
+      },
+      "metadata": {
+        "ActivityName": "QA Notification",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "uipath-microsoft-outlook365 connection",
+        "UseConnectionService": "true",
+        "Connector": "uipath-microsoft-outlook365"
+      }
+    }
+  ]
+}

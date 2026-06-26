@@ -1,0 +1,25 @@
+{
+  "$resourceType": "context",
+  "name": "Final QC Specification Rules",
+  "description": "Specification limits, warning limits, and acceptance criteria for Final QC phase evaluation. Used to determine PASS, WATCHLIST, or OOS status.",
+  "folderPath": "solution_folder",
+  "indexName": "Final QC Specification Rules",
+  "id": "9dd11639-d6cf-484b-8633-6145d0d8701f",
+  "referenceKey": "57ed08fe-38f1-4a11-478e-08dec68ee020",
+  "settings": {
+    "query": {
+      "description": "The query for the Semantic strategy.",
+      "variant": "dynamic"
+    },
+    "folderPathPrefix": {
+      "variant": "static"
+    },
+    "threshold": 0,
+    "resultCount": 3,
+    "retrievalMode": "semantic",
+    "fileExtension": {
+      "value": "All"
+    }
+  },
+  "contextType": "index"
+}

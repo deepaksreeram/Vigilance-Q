@@ -1,0 +1,10 @@
+{
+  "ProjectType": "WebApp",
+  "WebAppSettings": {
+    "AppId": "ID09777db65fdf47119306d41b859f27a3",
+    "IsCoreProject": true
+  },
+  "Name": "Quality Review",
+  "Description": null,
+  "MainFile": "Main.xaml"
+}

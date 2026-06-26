@@ -1,0 +1,97 @@
+{
+  "fileName": "evaluation-set-default.json",
+  "id": "3c60ec5f-8871-472d-add0-5a3e1b273d47",
+  "name": "Default Evaluation Set",
+  "batchSize": 10,
+  "evaluatorRefs": [
+    "27259780-2450-44d1-9e2a-e7dd049bfbe8"
+  ],
+  "evaluations": [
+    {
+      "id": "61df10bf-3323-4a3b-bc81-94be27c4d36f",
+      "name": "From Agent run - Trend Analysis Agent",
+      "inputs": {
+        "entityRecords": "{     \"PRE-002\": {       \"recordid\": \"PRE-002\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Equipment Cleaning\",       \"value\": \"Completed\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"CM-12\"     },     \"PRE-003\": {       \"recordid\": \"PRE-003\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Equipment Calibration\",       \"value\": \"Valid\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"CM-12\"     },     \"SIG-001\": {       \"recordid\": \"SIG-001\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Batch Start\",       \"value\": \"New batch started\",       \"unit\": \"\",       \"result_date\": \"2026-06-01\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     },     \"PRE-001\": {       \"recordid\": \"PRE-001\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Raw Material COA\",       \"value\": \"Approved\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     },     \"PRE-004\": {       \"recordid\": \"PRE-004\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Operator Qualification\",       \"value\": \"Qualified\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"OP-014\",       \"instrument_id\": \"\"     },     \"PRE-005\": {       \"recordid\": \"PRE-005\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Previous Assay Trend\",       \"value\": \"\",       \"unit\": \"\",       \"result_date\": \"\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     } }",
+        "phase": "Pre-Manufacturing"
+      },
+      "expectedOutput": {
+        "TrendAnalysisOutput": "{\"record_results\":[{\"record_id\":\"PRE-005\",\"phase\":\"Pre-Manufacturing\",\"batch_id\":\"PTC-006\",\"product_name\":\"Paracetamol 500mg Tablets\",\"test_or_signal\":\"Previous Assay Trend\",\"actual_value\":\"\",\"expected_value\":\"No continuous downward drift\",\"rule_id\":\"TR-ASSAY-001\",\"result_date\":\"\",\"status\":\"Watchlist\",\"evidence_source\":\"Trend_and_OOT_Evaluation_Rules; HistoricalTrends Entity\",\"execution_agent\":\"Trend Analysis Agent\",\"reason\":\"Rule TR-ASSAY-001 matched for Pre-Manufacturing Previous Assay Trend. Historical assay results show a continuous downward drift (101, 100.3, 98.8, 97, 96), so the status is Watchlist.\"}]}"
+      },
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "evalSetId": "3c60ec5f-8871-472d-add0-5a3e1b273d47",
+      "createdAt": "2026-06-15T10:54:43.349Z",
+      "updatedAt": "2026-06-15T10:54:43.349Z",
+      "source": "debugRun"
+    },
+    {
+      "id": "938f2346-beac-4a5f-a511-fbb83ed8f051",
+      "name": "From Agent run - Trend Analysis Agent",
+      "inputs": {
+        "entityRecords": "{     \"PRE-002\": {       \"recordid\": \"PRE-002\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Equipment Cleaning\",       \"value\": \"Completed\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"CM-12\"     },     \"PRE-003\": {       \"recordid\": \"PRE-003\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Equipment Calibration\",       \"value\": \"Valid\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"CM-12\"     },     \"SIG-001\": {       \"recordid\": \"SIG-001\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Batch Start\",       \"value\": \"New batch started\",       \"unit\": \"\",       \"result_date\": \"2026-06-01\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     },     \"PRE-001\": {       \"recordid\": \"PRE-001\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Raw Material COA\",       \"value\": \"Approved\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     },     \"PRE-004\": {       \"recordid\": \"PRE-004\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Operator Qualification\",       \"value\": \"Qualified\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"OP-014\",       \"instrument_id\": \"\"     },     \"PRE-005\": {       \"recordid\": \"PRE-005\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Previous Assay Trend\",       \"value\": \"\",       \"unit\": \"\",       \"result_date\": \"\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     } }",
+        "phase": "Pre-Manufacturing"
+      },
+      "expectedOutput": {
+        "TrendAnalysisOutput": "{\"record_results\":[{\"record_id\":\"PRE-005\",\"phase\":\"Pre-Manufacturing\",\"batch_id\":\"PTC-006\",\"product_name\":\"Paracetamol 500mg Tablets\",\"test_or_signal\":\"Previous Assay Trend\",\"actual_value\":\"\",\"expected_value\":\"No continuous downward drift\",\"rule_id\":\"TR-ASSAY-001\",\"result_date\":\"\",\"status\":\"Watchlist\",\"evidence_source\":\"Trend_and_OOT_Evaluation_Rules; HistoricalTrends Entity\",\"execution_agent\":\"Trend Analysis Agent\",\"reason\":\"Rule TR-ASSAY-001 was triggered based on a continuous downward drift in historical assay results across comparable prior batches. Status is Watchlist for Pre-Manufacturing because the defined trend condition was met.\"}]}"
+      },
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "evalSetId": "3c60ec5f-8871-472d-add0-5a3e1b273d47",
+      "createdAt": "2026-06-15T10:54:51.604Z",
+      "updatedAt": "2026-06-15T10:54:51.604Z",
+      "source": "debugRun"
+    },
+    {
+      "id": "ca7cae85-93b2-4d40-9d25-655b7d92aae0",
+      "name": "From Agent run - Trend Analysis Agent",
+      "inputs": {
+        "entityRecords": "{     \"PRE-002\": {       \"recordid\": \"PRE-002\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Equipment Cleaning\",       \"value\": \"Completed\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"CM-12\"     },     \"PRE-003\": {       \"recordid\": \"PRE-003\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Equipment Calibration\",       \"value\": \"Valid\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"CM-12\"     },     \"SIG-001\": {       \"recordid\": \"SIG-001\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Batch Start\",       \"value\": \"New batch started\",       \"unit\": \"\",       \"result_date\": \"2026-06-01\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     },     \"PRE-001\": {       \"recordid\": \"PRE-001\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Raw Material COA\",       \"value\": \"Approved\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     },     \"PRE-004\": {       \"recordid\": \"PRE-004\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Operator Qualification\",       \"value\": \"Qualified\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"OP-014\",       \"instrument_id\": \"\"     },     \"PRE-005\": {       \"recordid\": \"PRE-005\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Previous Assay Trend\",       \"value\": \"\",       \"unit\": \"\",       \"result_date\": \"\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     } }",
+        "phase": "Pre-Manufacturing"
+      },
+      "expectedOutput": {
+        "TrendAnalysisOutput": "{\"record_results\":[{\"record_id\":\"PRE-005\",\"phase\":\"Pre-Manufacturing\",\"batch_id\":\"PTC-006\",\"product_name\":\"Paracetamol 500mg Tablets\",\"test_or_signal\":\"Previous Assay Trend\",\"actual_value\":\"\",\"expected_value\":\"No continuous downward drift\",\"rule_id\":\"TR-ASSAY-001\",\"result_date\":\"\",\"status\":\"Watchlist\",\"evidence_source\":\"Trend_and_OOT_Evaluation_Rules; Historical_Trends Entity\",\"execution_agent\":\"Trend Analysis Agent\",\"reason\":\"Rule TR-ASSAY-001 triggered a downward drift pattern based on the historical assay sequence in the matched phase/test configuration, so the record is classified as Watchlist.\"}]}"
+      },
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "evalSetId": "3c60ec5f-8871-472d-add0-5a3e1b273d47",
+      "createdAt": "2026-06-15T10:56:39.304Z",
+      "updatedAt": "2026-06-15T10:56:39.304Z",
+      "source": "debugRun"
+    },
+    {
+      "id": "9ff761ba-69b0-420d-b584-edecc041e0b8",
+      "name": "From Agent run - Trend Analysis Agent",
+      "inputs": {
+        "entityRecords": "{     \"PRE-002\": {       \"recordid\": \"PRE-002\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Equipment Cleaning\",       \"value\": \"Completed\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"CM-12\"     },     \"PRE-003\": {       \"recordid\": \"PRE-003\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Equipment Calibration\",       \"value\": \"Valid\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"CM-12\"     },     \"SIG-001\": {       \"recordid\": \"SIG-001\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Batch Start\",       \"value\": \"New batch started\",       \"unit\": \"\",       \"result_date\": \"2026-06-01\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     },     \"PRE-001\": {       \"recordid\": \"PRE-001\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Raw Material COA\",       \"value\": \"Approved\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     },     \"PRE-004\": {       \"recordid\": \"PRE-004\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Operator Qualification\",       \"value\": \"Qualified\",       \"unit\": \"\",       \"result_date\": \"2026-06-05\",       \"status\": \"In Progress\",       \"analyst_id\": \"OP-014\",       \"instrument_id\": \"\"     },     \"PRE-005\": {       \"recordid\": \"PRE-005\",       \"phase\": \"Pre-Manufacturing\",       \"batch_id\": \"PTC-006\",       \"product_name\": \"Paracetamol 500mg Tablets\",       \"test_or_signal\": \"Previous Assay Trend\",       \"value\": \"\",       \"unit\": \"\",       \"result_date\": \"\",       \"status\": \"In Progress\",       \"analyst_id\": \"\",       \"instrument_id\": \"\"     } }",
+        "phase": "Pre-Manufacturing"
+      },
+      "expectedOutput": {
+        "TrendAnalysisOutput": "{\"record_results\":[{\"record_id\":\"PRE-005\",\"phase\":\"Pre-Manufacturing\",\"batch_id\":\"PTC-006\",\"product_name\":\"Paracetamol 500mg Tablets\",\"test_or_signal\":\"Previous Assay Trend\",\"actual_value\":\"\",\"expected_value\":\"No continuous downward drift\",\"rule_id\":\"TR-ASSAY-001\",\"result_date\":\"\",\"status\":\"Watchlist\",\"evidence_source\":\"Trend_and_OOT_Evaluation_Rules; Historical_Trends Entity\",\"execution_agent\":\"Trend Analysis Agent\",\"reason\":\"Rule TR-ASSAY-001 triggered based on a continuous downward drift in comparable historical Assay results for Paracetamol 500mg Tablets. The status is Watchlist.\"}]}"
+      },
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "evalSetId": "3c60ec5f-8871-472d-add0-5a3e1b273d47",
+      "createdAt": "2026-06-15T11:02:53.470Z",
+      "updatedAt": "2026-06-15T11:02:53.470Z",
+      "source": "debugRun"
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2026-06-14T02:30:20.365Z",
+  "updatedAt": "2026-06-16T10:13:05.465Z",
+  "agentMemoryEnabled": false,
+  "agentMemorySettings": [],
+  "lineByLineEvaluation": false
+}

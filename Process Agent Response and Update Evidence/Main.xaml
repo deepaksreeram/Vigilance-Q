@@ -1,0 +1,151 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:de="clr-namespace:DataService.Entities;assembly=DataService.DataService.Entities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common"
+ xmlns:this="clr-namespace:"
+ xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="QSARecords" Type="InArgument(x:String)" />
+    <x:Property Name="TARecords" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Main.QSARecords>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.QSARecords>
+  <this:Main.TARecords>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.TARecords>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.DataService.Activities.Models</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Web.Activities.JSON.Models</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>DataService.Entities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
+      <AssemblyReference>DataService.DataService.Entities</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Annotations</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Xml.ReaderWriter</AssemblyReference>
+      <AssemblyReference>System.Xml.XmlSerializer</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:CurrentJobInfo" Name="jobData">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">ManualTrigger_1</x:String>
+            <x:String x:Key="SourcePropertyName">Result</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="x:Int64" Name="EvidenceRecords">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">QueryEntityRecords`1_1</x:String>
+            <x:String x:Key="SourcePropertyName">TotalRecords</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Default="[new System.Data.DataTable With {.TableName = &quot;TableName&quot;}]" Name="DT_TrendAnalysis" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[new System.Data.DataTable With {.TableName = &quot;TableName&quot;}]" Name="DT_QualitySignalAnalysis" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[new System.Data.DataTable With {.TableName = &quot;TableName&quot;}]" Name="DT_Main" />
+      <Variable x:TypeArguments="scg:IList(de:LIMS)" Name="LIMSRecords" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" Result="[jobData]" />
+    <Sequence DisplayName="Sequence 1" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <Assign DisplayName="Converting Quality Signal Analysis Agent Output to Datatable" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="sd:DataTable">[DT_QualitySignalAnalysis]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="sd:DataTable">[Newtonsoft.Json.JsonConvert.DeserializeObject(Of System.Data.DataTable)( Newtonsoft.Json.Linq.JObject.Parse(QSARecords)("record_results").ToString)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Converting Trend Analysis Agent Output to Datatable" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="sd:DataTable">[DT_TrendAnalysis]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="sd:DataTable">[Newtonsoft.Json.JsonConvert.DeserializeObject(Of System.Data.DataTable)( Newtonsoft.Json.Linq.JObject.Parse(TARecords)("record_results").ToString)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:MergeDataTable Destination="[DT_Main]" DisplayName="Merge Data Table" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[DT_QualitySignalAnalysis]" />
+      <ui:MergeDataTable Destination="[DT_Main]" DisplayName="Merge Data Table 1" sap2010:WorkflowViewState.IdRef="MergeDataTable_2" MissingSchemaAction="Add" Source="[DT_TrendAnalysis]" />
+      <Sequence DisplayName="Updating LIMS Status" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <uda:QueryEntityRecords x:TypeArguments="de:LIMS" FilterArguments="{x:Null}" FilterValues="{x:Null}" TotalRecords="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" ContinueOnError="False" DisplayName="Query LIMS Entity Records" EntityId="9737966b-a160-f111-8fcb-000d3a45fabb" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_2" OutputRecords="[LIMSRecords]" QueriedEntityId="9737966b-a160-f111-8fcb-000d3a45fabb" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100" />
+        <uda:UpdateMultipleEntityRecords x:TypeArguments="de:LIMS" FailedRecords="{x:Null}" OutputRecords="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" ContinueBatchOnFailure="True" ContinueOnError="False" DisplayName="Update Multiple LIMS Entity Records Status" EntityId="9737966b-a160-f111-8fcb-000d3a45fabb" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="UpdateMultipleEntityRecords`1_1" InputRecords="[(From l In LIMSRecords&#xA; Join d In DT_Main.AsEnumerable()&#xA; On l.recordid Equals d(&quot;record_id&quot;).ToString()&#xA; Select New DataService.Entities.LIMS With {&#xA;     .Id = l.Id,&#xA;     .status = d(&quot;status&quot;).ToString()&#xA; }).ToList()]" TimeoutInMs="30000" />
+      </Sequence>
+      <Sequence DisplayName="Creating Evidence Records" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <uda:QueryEntityRecords x:TypeArguments="de:Evidence" FilterArguments="{x:Null}" FilterValues="{x:Null}" OutputRecords="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" ContinueOnError="False" DisplayName="Query Evidence Entity Records" EntityId="32470262-2766-f111-8fcb-000d3ab1a7ac" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_1" QueriedEntityId="32470262-2766-f111-8fcb-000d3ab1a7ac" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100" TotalRecords="[EvidenceRecords]" />
+        <uda:CreateMultipleEntityRecords x:TypeArguments="de:Evidence" FailedRecords="{x:Null}" OutputRecords="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" ContinueBatchOnFailure="True" ContinueOnError="False" DisplayName="Create Multiple Evidence Entity Records" EntityId="32470262-2766-f111-8fcb-000d3ab1a7ac" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="CreateMultipleEntityRecords`1_1" InputRecords="[DT_Main.AsEnumerable().&#xA;Where(Function(r) Not String.Equals(&#xA;    If(IsDBNull(r(&quot;status&quot;)), &quot;&quot;, r(&quot;status&quot;).ToString().Trim()),&#xA;    &quot;NA&quot;,&#xA;    StringComparison.OrdinalIgnoreCase&#xA;)).&#xA;Select(Function(r, i) New DataService.Entities.Evidence With {&#xA;    .evidenceid = &quot;EV-&quot; &amp; (EvidenceRecords + i + 1).ToString(&quot;000&quot;),&#xA;    .recordid = If(IsDBNull(r(&quot;record_id&quot;)), &quot;&quot;, r(&quot;record_id&quot;).ToString()),&#xA;    .phase = If(IsDBNull(r(&quot;phase&quot;)), &quot;&quot;, r(&quot;phase&quot;).ToString()),&#xA;    .batchid = If(IsDBNull(r(&quot;batch_id&quot;)), &quot;&quot;, r(&quot;batch_id&quot;).ToString()),&#xA;    .productname = If(IsDBNull(r(&quot;product_name&quot;)), &quot;&quot;, r(&quot;product_name&quot;).ToString()),&#xA;    .testorsignal = If(IsDBNull(r(&quot;test_or_signal&quot;)), &quot;&quot;, r(&quot;test_or_signal&quot;).ToString()),&#xA;    .actualvalue = If(IsDBNull(r(&quot;actual_value&quot;)), &quot;&quot;, r(&quot;actual_value&quot;).ToString()),&#xA;    .expectedvalue = If(IsDBNull(r(&quot;expected_value&quot;)), &quot;&quot;, r(&quot;expected_value&quot;).ToString()),&#xA;    .ruleid = If(IsDBNull(r(&quot;rule_id&quot;)), &quot;&quot;, r(&quot;rule_id&quot;).ToString()),&#xA;    .status = If(IsDBNull(r(&quot;status&quot;)), &quot;&quot;, r(&quot;status&quot;).ToString()),&#xA;    .evidencesource = If(IsDBNull(r(&quot;evidence_source&quot;)), &quot;&quot;, r(&quot;evidence_source&quot;).ToString()),&#xA;    .executionagent = If(IsDBNull(r(&quot;execution_agent&quot;)), &quot;&quot;, r(&quot;execution_agent&quot;).ToString()),&#xA;    .reason = If(IsDBNull(r(&quot;reason&quot;)), &quot;&quot;, r(&quot;reason&quot;).ToString())&#xA;}).ToList()]" TimeoutInMs="30000" />
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>

@@ -1,0 +1,66 @@
+{
+  "version": "3.0.0.0",
+  "bundleHash": "7Vys2XO1BcPpSlI11icmGSNr6mLS3Vzk0CPGOtobE",
+  "addedAssemblyNames": [],
+  "discardedAssemblyNames": [
+    "DataService.gUkOxIfnF3gg"
+  ],
+  "discardedAssemblyReplacements": {
+    "DataService.gUkOxIfnF3gg": "DataService.DataService.Entities",
+    "DataService.gDLsOU4zL3gg": "DataService.DataService.Entities"
+  },
+  "assembliesJitInfo": {
+    "DataService.gUkOxIfnF3gg": {
+      "createdAt": "2026-06-09T07:31:34.0608261+00:00",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "LIMS",
+        "Phases",
+        "SystemUser",
+        "Product",
+        "TestSignal",
+        "UserType"
+      ]
+    },
+    "DataService.g1eqY1MjG3gg": {
+      "createdAt": "2026-06-10T13:48:20.2365264+05:30",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "LIMS",
+        "Phases",
+        "SystemUser",
+        "Product",
+        "TestSignal",
+        "UserType"
+      ]
+    },
+    "DataService.gDLsOU4zL3gg": {
+      "createdAt": "2026-06-16T09:47:48.5851933+00:00",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "LIMS",
+        "Phases",
+        "SystemUser",
+        "Product",
+        "TestSignal",
+        "UserType"
+      ]
+    },
+    "DataService.DataService.Entities": {
+      "createdAt": "2026-06-26T05:40:21.394738+00:00",
+      "providerName": "DataService",
+      "rootNamespace": "DataService.Entities",
+      "typeNames": [
+        "LIMS",
+        "Phases",
+        "SystemUser",
+        "Product",
+        "TestSignal",
+        "UserType"
+      ]
+    }
+  }
+}

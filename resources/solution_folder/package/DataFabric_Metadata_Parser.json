@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "DataFabric Metadata Parser",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "3e30ff35-4639-476b-ae08-969a23a01509",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "DataFabric Metadata Parser",
+      "description": null
+    },
+    "locks": [],
+    "key": "033d603f-f068-4031-9b65-7002990b2e28"
+  }
+}

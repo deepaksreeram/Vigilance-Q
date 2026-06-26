@@ -1,0 +1,25 @@
+{
+  "$resourceType": "context",
+  "name": "Recommendation Review Rules",
+  "description": "The source of truth for evaluating evidence and assigning recommendation decisions, risk levels, and summaries. Use only the rules defined here.",
+  "folderPath": "solution_folder",
+  "indexName": "Recommendation Review Rules",
+  "id": "9584c55c-fd99-4510-84fc-57f2b5d3950e",
+  "referenceKey": "a514ff54-7cc8-4d34-be37-08decbc1aecd",
+  "settings": {
+    "query": {
+      "description": "The query for the Semantic strategy.",
+      "variant": "dynamic"
+    },
+    "folderPathPrefix": {
+      "variant": "static"
+    },
+    "threshold": 0,
+    "resultCount": 3,
+    "retrievalMode": "semantic",
+    "fileExtension": {
+      "value": "All"
+    }
+  },
+  "contextType": "index"
+}

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:de="clr-namespace:DataService.Entities;assembly=DataService.DataService.Entities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="phase" Type="InArgument(x:String)" />
+    <x:Property Name="batch_id" Type="InArgument(x:String)" />
+    <x:Property Name="product_name" Type="InArgument(x:String)" />
+    <x:Property Name="entityRecords" Type="OutArgument(x:String)" />
+  </x:Members>
+  <this:Main.phase>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.phase>
+  <this:Main.batch_id>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.batch_id>
+  <this:Main.product_name>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.product_name>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="26">
+      <x:String>System</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.DataService.Activities.Models</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>DataService.Entities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="21">
+      <AssemblyReference>DataService.DataService.Entities</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Annotations</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="njl:JObject" Default="[new Newtonsoft.Json.Linq.JObject From {  }]" Name="jsonObj" />
+      <Variable x:TypeArguments="scg:IList(de:LIMS)" Name="outputRecords" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <uda:QueryEntityRecords x:TypeArguments="de:LIMS" TotalRecords="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" ContinueOnError="False" DisplayName="Query LIMS Entity Records" EntityId="9737966b-a160-f111-8fcb-000d3a45fabb" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_1" OutputRecords="[outputRecords]" QueriedEntityId="9737966b-a160-f111-8fcb-000d3a45fabb" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
+      <uda:QueryEntityRecords.FilterArguments>
+        <uda:FilterArgument FilterActivityType="{x:Null}">
+          <uda:FilterArgument.Filter>
+            <uda:GroupFilter Index="0" Operator="AND">
+              <uda:GroupFilter.Filters>
+                <scg:List x:TypeArguments="uda:SimpleFilter" Capacity="4">
+                  <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="phase.phase" FieldType="UiPath.DataService.Core.Models.EntityField" Operator="=" ValueIndex="0" />
+                  <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="batchid" FieldType="UiPath.DataService.Core.Models.EntityField" Operator="=" ValueIndex="1" />
+                  <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="productname.productname" FieldType="UiPath.DataService.Core.Models.EntityField" Operator="=" ValueIndex="2" />
+                </scg:List>
+              </uda:GroupFilter.Filters>
+              <uda:GroupFilter.Groups>
+                <scg:List x:TypeArguments="uda:GroupFilter" Capacity="0" />
+              </uda:GroupFilter.Groups>
+            </uda:GroupFilter>
+          </uda:FilterArgument.Filter>
+        </uda:FilterArgument>
+      </uda:QueryEntityRecords.FilterArguments>
+      <uda:QueryEntityRecords.FilterValues>
+        <scg:List x:TypeArguments="InArgument" Capacity="4">
+          <InArgument x:TypeArguments="x:String">[string.Format("{0}", phase)]</InArgument>
+          <InArgument x:TypeArguments="x:String">[string.Format("{0}", batch_id)]</InArgument>
+          <InArgument x:TypeArguments="x:String">[string.Format("{0}", product_name)]</InArgument>
+        </scg:List>
+      </uda:QueryEntityRecords.FilterValues>
+    </uda:QueryEntityRecords>
+    <ui:ForEach x:TypeArguments="de:LIMS" CurrentIndex="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" DisplayName="For Each currentLIMS" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[outputRecords]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="de:LIMS">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="de:LIMS" Name="currentLIMS" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Assign DisplayName="Assign" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="njl:JToken">[jsonObj(currentLIMS.recordid)]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="njl:JToken" xml:space="preserve">[New JObject(
+New JProperty("recordid", If(currentLIMS.recordid Is Nothing,"",currentLIMS.recordid.ToString)),
+New JProperty("phase", If(currentLIMS.phase Is Nothing,"",currentLIMS.phase.phase.ToString)),
+New JProperty("batch_id", If(currentLIMS.batchid Is Nothing,"",currentLIMS.batchid.ToString)),
+New JProperty("product_name", If(currentLIMS.productname Is Nothing,"",currentLIMS.productname.productname.ToString)),
+New JProperty("test_or_signal", If(currentLIMS.testorsignal Is Nothing,"",currentLIMS.testorsignal.testorsignal.ToString)),
+New JProperty("value", If(currentLIMS.value Is Nothing,"",currentLIMS.value.ToString)),
+New JProperty("unit", If(currentLIMS.unit Is Nothing,"",currentLIMS.unit.ToString)),
+New JProperty("result_date", If(currentLIMS.resultdate Is Nothing,"",CDate(currentLIMS.resultdate).ToString("yyyy-MM-dd"))),
+New JProperty("status", If(currentLIMS.status Is Nothing,"",currentLIMS.status.ToString)),
+New JProperty("analyst_id", If(currentLIMS.analystid Is Nothing,"",currentLIMS.analystid.ToString)),
+New JProperty("instrument_id", If(currentLIMS.instrumentid Is Nothing,"",currentLIMS.instrumentid.ToString))
+)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uda:UpdateEntityRecord x:TypeArguments="de:LIMS" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="9737966b-a160-f111-8fcb-000d3a45fabb" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new DataService.Entities.LIMS() With {  .status = &quot;In Progress&quot;, .Id = currentLIMS.Id }]" RecordId="[currentLIMS.Id]" TimeoutInMs="30000">
+              <uda:UpdateEntityRecord.State>
+                <udam:RecordState RequiredFieldCount="1">
+                  <udam:RecordState.SelectedFields>
+                    <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="1">
+                      <udam:DynamicEntityField Id="ac37966b-a160-f111-8fcb-000d3a45fabb" Name="status">
+                        <udam:DynamicEntityField.ArgumentValue>
+                          <InArgument x:TypeArguments="x:String">In Progress</InArgument>
+                        </udam:DynamicEntityField.ArgumentValue>
+                      </udam:DynamicEntityField>
+                    </scg:List>
+                  </udam:RecordState.SelectedFields>
+                </udam:RecordState>
+              </uda:UpdateEntityRecord.State>
+            </uda:UpdateEntityRecord>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <Assign DisplayName="Assign EntityRecords" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[entityRecords]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[jsonObj.ToString()]</InArgument>
+      </Assign.Value>
+    </Assign>
+  </Sequence>
+</Activity>

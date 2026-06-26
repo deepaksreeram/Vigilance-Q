@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Process Agent Response and Update Evidence",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "3d31aef2-7767-4c8e-9c13-ae3e39d749af",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Process Agent Response and Update Evidence",
+      "description": null
+    },
+    "locks": [],
+    "key": "e475172a-91b5-4fe4-aeaa-778f80eef401"
+  }
+}

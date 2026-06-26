@@ -1,0 +1,10 @@
+{
+  "ProjectType": "WebApp",
+  "WebAppSettings": {
+    "AppId": "ID1c8cac7e44de4fa1b70e8bfbc067761d",
+    "IsCoreProject": true
+  },
+  "Name": "Evidence Validation",
+  "Description": null,
+  "MainFile": "Main.xaml"
+}

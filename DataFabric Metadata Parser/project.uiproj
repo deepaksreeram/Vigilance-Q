@@ -1,0 +1,6 @@
+{
+  "ProjectType": "Process",
+  "Name": "DataFabric Metadata Parser",
+  "Description": null,
+  "MainFile": "Main.xaml"
+}

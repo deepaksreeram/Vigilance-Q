@@ -1,0 +1,38 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Trend and OOT Evaluation Rules",
+    "kind": "index",
+    "apiVersion": "ecs.uipath.com/v2",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "Trend and OOT Evaluation Rules",
+        "kind": "Bucket"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Trend and OOT Evaluation Rules",
+      "description": "",
+      "storageBucketReference": {
+        "name": "Trend and OOT Evaluation Rules",
+        "key": "c46ae903-52ba-442b-a09f-7e7d02a9d6a0",
+        "folderKey": "807da034-7132-4f3e-a3ed-2849d65b8b22"
+      },
+      "fileNameGlob": "All",
+      "dataSourceType": "StorageBucket",
+      "includeSubfolders": true,
+      "ingestionType": "Advanced",
+      "encrypted": false
+    },
+    "locks": [],
+    "key": "0e55dfab-2bf0-49ea-c12c-08dec91deb9e"
+  }
+}
