@@ -47,21 +47,13 @@ The case remains active throughout the complete quality lifecycle:
 
 ## Demo Scenario
 
-### Product
-**Paracetamol 500 mg Immediate-Release Tablets**
-
-### Batch
-**PTC-006**
-
-### Scenario
-A batch that appears to be passing while gradually accumulating multiple weak quality signals.
-
-### AI Outcome
-Recommend **Batch Hold** and initiate a **Phase I Investigation**.
-
-### Human Decision
-The QA reviewer evaluates the assembled evidence and makes the final quality decision.
-
+| Item | Details |
+|------|---------|
+| **Product** | Paracetamol 500 mg Immediate-Release Tablets |
+| **Batch** | PTC-006 |
+| **Scenario** | A batch that meets release specifications but gradually accumulates multiple weak quality signals across manufacturing, testing, and environmental data. Individually, these signals are not out of specification; collectively, they indicate an elevated quality risk. |
+| **AI Recommendation** | Recommend placing the batch on **Quality Hold** and initiating a **Phase I Investigation** based on the aggregated risk assessment. |
+| **Human Decision** | The QA reviewer evaluates the assembled evidence, considers the AI recommendation, and makes the final batch disposition decision in accordance with GMP procedures. |
 
 ## Problem It Solves
 
@@ -102,14 +94,15 @@ The solution enables:
 
 | Component | What it does |
 |---|---|
-| **UiPath Maestro (Case Management)** | Orchestrates the end-to-end case. Manages stages, routing, human tasks, the audit trail, and built-in SLA timers and escalations at both the case and stage levels. |
+| **UiPath Maestro Case** | Orchestrates the end-to-end case. Manages stages, routing, human tasks, the audit trail, and built-in SLA timers and escalations at both the case and stage levels. |
 | **UiPath Orchestrator** | Hosts and runs every RPA process, App, and Agent referenced in the case (via folder-path bindings), and provides execution logs/traceability for them. |
 | **UiPath Coding Agents** | Used to accelerate the development of individual RPA workflows and agents by leveraging Gemini CLI and Codex. Assisted in generating, refining, and maintaining workflow logic and agent implementations. |
-| **UiPath Agents (Agent Builder)** | Quality Signal Analysis Agent, Trend Analysis Agent, and Recommendation Agent. Low-code agents checking data against fixed, version-controlled rules. The first two run at every QC phase. |
+| **UiPath Agents** | Quality Signal Analysis Agent, Trend Analysis Agent, and Recommendation Agent. Low-code agents checking data against fixed, version-controlled rules. The first two run at every QC phase. |
 | **UiPath RPA workflows** | Retrieve records, validate batch data, write corrected data back, and save agent results as evidence. No decisions, just data movement and checks. |
 | **UiPath Apps + Action Center** | Human-facing screens: Data Review & Verification for fixing batch data, Evidence Validation for checking agent results, Quality Review for the final QA decision. |
 | **UiPath Data Fabric** | The database behind everything. Stores LIMS records, Historical Trend, and Evidence. Also triggers the case when a new batch starts. |
 | **UiPath Integration Service** | The connector layer behind both the LIMS trigger and the Outlook email step - handles the event trigger and the outbound Send Email activity. |
+| **UiPath Cloud Robots - Serverless** | Executes RPA processes without requiring dedicated unattended machine |
 
 In pharma quality, classification must be reproducible, attributable, timestamped, and inspectable. An LLM should not decide whether a batch signal is OOT or OOS. A controlled rule running in a agent can.
 
@@ -136,6 +129,7 @@ Each batch = **one live Maestro case**. Stages activate as signals arrive; SLAs 
   - Integration Service
   - Apps & Action Center
   - Studio Web
+- Requires UiPath Cloud Robots – Serverless to execute RPA processes.
 - An Outlook / Microsoft 365 account for the QA Notification connection.
 - Data Fabric schema file (JSON): [Vigilance Q DataFabric Schema.json](https://drive.google.com/file/d/1XR_u331geyKIZRYd5TWpMWPydoEI8TpX/view?usp=sharing)
 - Sample data representing batch `PTC-006`: [Vigilance Q_EntityData.xlsx](https://docs.google.com/spreadsheets/d/105PbZyZepOxiPCMxytCZ536m8aIL1IJq/edit?usp=sharing&ouid=103203708202152722396&rtpof=true&sd=true)
