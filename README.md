@@ -97,7 +97,7 @@ The solution enables:
 | **UiPath Maestro Case** | Orchestrates the end-to-end case. Manages stages, routing, human tasks, the audit trail, and built-in SLA timers and escalations at both the case and stage levels. |
 | **UiPath Orchestrator** | Hosts and runs every RPA process, App, and Agent referenced in the case (via folder-path bindings), and provides execution logs/traceability for them. |
 | **UiPath Coding Agents** | Used to accelerate the development of individual RPA workflows and agents by leveraging Gemini CLI and Codex. Assisted in generating, refining, and maintaining workflow logic and agent implementations. |
-| **UiPath Agents** | Quality Signal Analysis Agent, Trend Analysis Agent, and Recommendation Agent. Low-code agents checking data against fixed, version-controlled rules. The first two run at every QC phase. |
+| **UiPath Agents** | Quality Signal Analysis Agent, Trend Analysis Agent, and Recommendation Agent. Agents checking data against fixed, version-controlled rules. The first two run at every QC phase. |
 | **UiPath RPA workflows** | Retrieve records, validate batch data, write corrected data back, and save agent results as evidence. No decisions, just data movement and checks. |
 | **UiPath Apps + Action Center** | Human-facing screens: Data Review & Verification for fixing batch data, Evidence Validation for checking agent results, Quality Review for the final QA decision. |
 | **UiPath Data Fabric** | The database behind everything. Stores LIMS records, Historical Trend, and Evidence. Also triggers the case when a new batch starts. |
