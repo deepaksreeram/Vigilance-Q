@@ -148,23 +148,24 @@ Once cloning completes, the solution will typically show validation errors. Reso
 2. **Indexes** — recreate the index used for context grounding/rule documents (see 5.4 below).
 3. **Entities** — create or refresh Data Fabric entities flagged as missing/out of sync.
 4. Open the Case Plan in Maestro and check for any remaining validation errors.
-5. **Action App User Assignment** — from within the Case Plan, open each Action App's Properties → Assignment (Data Review & Verification, Evidence Validation, Quality Review) and assign a user to each. This must be done before publishing — publishing without assigned users will leave human tasks with no one to route to.
+5. **Action App User Assignment** — From within the Case Plan, open the Properties of each Action App (Data Review & Verification, Evidence Validation, and Quality Review), navigate to Assignment, and assign a user to each app. This must be completed before publishing; otherwise, human tasks will have no assigned user.
 
 ### 5.4 Import Data Fabric Schema, Sample Data & Context Grounding
  
-1. Import the Data Fabric schema JSON (`<link from 5.1>`) into your Data Fabric app.
-2. Load the sample data for batch `PTC-006` from the provided Google Sheet (`<link from 5.1>`) into the corresponding Data Fabric entities.
-3. Upload the context grounding resource files (`<link from 5.1>`) into the Storage Bucket — these include the different rule/reference documents used across the agents.
-4. Create an Index on that storage bucket — this powers the context grounding/document lookups used by the agents.
-   
+1. Import the Data Fabric schema using the Vigilance Q DataFabric Schema.json file provided in the Prerequisites section (5.1).
+2. Import the sample data for batch PTC-006 using the Vigilance Q_EntityData.xlsx file provided in the Prerequisites section (5.1). Ensure the data is loaded into the corresponding Data Fabric entities.
+3. Upload the Context Grounding resource files provided in the Prerequisites section (5.1) to a Storage Bucket. These files contain the rule and reference documents used by the different agents.
+4. Create an Index for the Storage Bucket containing the context grounding files. This enables the agents to perform context grounding and retrieve relevant documents during execution.
+ 
 ### 5.5 Publish & Deploy
  
-1. Once all validation errors are resolved and Action App users are assigned, **publish the package**.
-2. **Deploy** the solution to your target Orchestrator folder.
-3. **Allocate the required license(s)** to that folder (Maestro, Agents, Apps as applicable).
-4. **Set up the Data Fabric trigger** so that a new LIMS/batch record automatically starts a Maestro Batch Quality Case.
+1. Once all validation errors are resolved and Action App users are assigned, publish the package.
+2. Deploy the solution to your target Orchestrator folder.
+3. Allocate the required license(s) to that folder.
+4. Configure the Data Fabric trigger to automatically start a Case whenever a new batch record is added in the LIMS entity.
+
 ### 5.6 Run the Demo
  
-1. Add a new input record into **LIMS (Data Fabric)** representing batch `PTC-006`.
-2. This automatically triggers a new **Maestro Batch Quality Case**.
-3. Follow the case through its stages (Quality Signal Analysis → Trend Analysis → Evidence Review → Recommendation → Human Final Stage Review) using Maestro and Action Center.
+1. Add a new batch record to the LIMS entity in Data Fabric representing batch `PTC-006`.
+2. A new Maestro Batch Quality Case is automatically created.
+3. Follow the case through its stages in the Maestro instance.
