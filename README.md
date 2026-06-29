@@ -114,6 +114,14 @@ In pharma quality, classification must be reproducible, attributable, timestampe
 
 **Structured rules decide. SOP context explains. Human QA approves.**
 
+## 4. Architecture Overview
+
+Reference architecture: every signal becomes case evidence, every recommendation hits a human gate, and every system update is approved.
+
+<img width="806" height="438" alt="gallery" src="https://github.com/user-attachments/assets/0568f457-c12e-4ea4-8611-cedd7ba41dd1" />
+
+Each batch = **one live Maestro case**. Stages activate as signals arrive; SLAs and audit history accumulate at every step regardless of which branch the case takes.
+
 ## 5. Setup Instructions
  
 ### 5.1 Prerequisites
@@ -169,3 +177,6 @@ Once cloning completes, the solution will typically show validation errors. Reso
 1. Add a new batch record to the LIMS entity in Data Fabric representing batch `PTC-006`.
 2. A new Maestro Batch Quality Case is automatically created.
 3. Follow the case through its stages in the Maestro instance.
+
+
+> **⚠️ Disclaimer:** This is a hackathon demo prototype. The pharma data, rules, thresholds, and integrations are representative demo assets and are not intended for production GMP use without validation.
