@@ -40,13 +40,10 @@ The case remains active throughout the complete quality lifecycle:
 7. Controlled enterprise system updates
 8. Audit-ready case closure
 
----
-
 ## Core Principle
 
 > **AI investigates. Human QA decides. Systems update only after approval.**
 
----
 
 ## Demo Scenario
 
@@ -65,9 +62,8 @@ Recommend **Batch Hold** and initiate a **Phase I Investigation**.
 ### Human Decision
 The QA reviewer evaluates the assembled evidence and makes the final quality decision.
 
----
 
-# Problem It Solves
+## Problem It Solves
 
 Pharmaceutical batch quality review is inherently:
 
@@ -89,9 +85,8 @@ Traditional automation is often too linear for this type of work. Fixed workflow
 
 **Vigilance ‘Q’** leverages **UiPath Maestro Case** to manage the process as a **live case lifecycle** instead of a rigid workflow.
 
----
 
-# Solution Capabilities
+## Solution Capabilities
 
 The solution enables:
 
@@ -102,3 +97,74 @@ The solution enables:
 - QA decision gates
 - Controlled enterprise system updates after approval
 - Audit-ready case closure records
+
+## UiPath Components
+
+| Component | What it does |
+|---|---|
+| **UiPath Maestro (Case Management)** | Runs the whole case. Manages stages, routing, human tasks, the audit trail, and built-in SLA timers/escalations at the case and stage level. |
+| **UiPath Agents (Agent Builder)** | Quality Signal Analysis Agent, Trend Analysis Agent, and Recommendation Agent. Low-code agents checking data against fixed, version-controlled rules. The first two run at every QC phase. |
+| **UiPath RPA workflows** | Fetch records, validate batch data, write corrected data back, and save agent results as evidence. No decisions, just data movement and checks. |
+| **UiPath Apps + Action Center** | Human-facing screens: Data Review & Verification for fixing batch data, Evidence Validation for checking agent results, Quality Review for the final QA decision. |
+| **UiPath Data Fabric** | The database behind everything. Stores LIMS records, Historical Trend, and Evidence. Also triggers the case when a new batch starts. |
+| **UiPath Integration Service** | The connector layer behind both the LIMS trigger and the Outlook email step — handles the event trigger and the outbound Send Email activity. |
+| **UiPath Orchestrator** | Hosts and runs every RPA process, App, and Agent referenced in the case (via folder-path bindings), and provides execution logs/traceability for them. |
+
+In pharma quality, classification must be reproducible, attributable, timestamped, and inspectable. An LLM should not decide whether a batch signal is OOT or OOS. A controlled rule running in a agent can.
+
+**Structured rules decide. SOP context explains. Human QA approves.**
+
+## 5. Setup Instructions
+ 
+### 5.1 Prerequisites
+ 
+- A UiPath Automation Cloud tenant with the following licensed/enabled:
+  - Orchestrator
+  - Maestro
+  - Agent Builder
+  - Data Fabric
+  - Integration Service
+  - Apps & Action Center
+  - Studio Web
+- An Outlook / Microsoft 365 account for the QA Notification connection.
+- Data Fabric schema file (JSON): [Vigilance Q DataFabric Schema.json](https://drive.google.com/file/d/1XR_u331geyKIZRYd5TWpMWPydoEI8TpX/view?usp=sharing)
+- Sample data representing batch `PTC-006`: [Vigilance Q_EntityData.xlsx](https://docs.google.com/spreadsheets/d/105PbZyZepOxiPCMxytCZ536m8aIL1IJq/edit?usp=sharing&ouid=103203708202152722396&rtpof=true&sd=true)
+- Context grounding resource files — rule/reference documents used across the different agents: [Context Grounding](https://drive.google.com/drive/folders/12ulsAsz4_gtUotDDtDwR7CXMo9qBj1m7?usp=sharing)
+  
+### 5.2 Clone the Repository into Studio Web
+ 
+1. Log in to UiPath Automation Cloud.
+2. Open Studio Web and go to Local Workspace.
+3. Click Clone Solution.
+4. Connect your GitHub account and provide the repository URL: [Vigilance Q](https://github.com/deepaksreeram/Vigilance-Q)
+5. Click clone. When the permission pop-up appears, click Allow.
+6. Wait for cloning to finish — this can take a few minutes depending on solution size.
+   
+### 5.3 Resolve Validation Errors
+ 
+Once cloning completes, the solution will typically show validation errors. Resolve them in this order:
+ 
+1. **Connections** — reconnect/re-authenticate Data Fabric and Outlook Connections.
+2. **Indexes** — recreate the index used for context grounding/rule documents (see 5.4 below).
+3. **Entities** — create or refresh Data Fabric entities flagged as missing/out of sync.
+4. Open the Case Plan in Maestro and check for any remaining validation errors.
+5. **Action App User Assignment** — from within the Case Plan, open each Action App's Properties → Assignment (Data Review & Verification, Evidence Validation, Quality Review) and assign a user to each. This must be done before publishing — publishing without assigned users will leave human tasks with no one to route to.
+
+### 5.4 Import Data Fabric Schema, Sample Data & Context Grounding
+ 
+1. Import the Data Fabric schema JSON (`<link from 5.1>`) into your Data Fabric app.
+2. Load the sample data for batch `PTC-006` from the provided Google Sheet (`<link from 5.1>`) into the corresponding Data Fabric entities.
+3. Upload the context grounding resource files (`<link from 5.1>`) into the Storage Bucket — these include the different rule/reference documents used across the agents.
+4. Create an Index on that storage bucket — this powers the context grounding/document lookups used by the agents.
+   
+### 5.5 Publish & Deploy
+ 
+1. Once all validation errors are resolved and Action App users are assigned, **publish the package**.
+2. **Deploy** the solution to your target Orchestrator folder.
+3. **Allocate the required license(s)** to that folder (Maestro, Agents, Apps as applicable).
+4. **Set up the Data Fabric trigger** so that a new LIMS/batch record automatically starts a Maestro Batch Quality Case.
+### 5.6 Run the Demo
+ 
+1. Add a new input record into **LIMS (Data Fabric)** representing batch `PTC-006`.
+2. This automatically triggers a new **Maestro Batch Quality Case**.
+3. Follow the case through its stages (Quality Signal Analysis → Trend Analysis → Evidence Review → Recommendation → Human Final Stage Review) using Maestro and Action Center.
