@@ -108,12 +108,11 @@ In pharma quality, classification must be reproducible, attributable, timestampe
 
 **Structured rules decide. SOP context explains. Human QA approves.**
 
-## 4. Architecture Overview
+## 4. Solution Architecture
 
 Reference architecture: every signal becomes case evidence, every recommendation hits a human gate, and every system update is approved.
 
-<img width="1279" height="720" alt="Slide7" src="https://github.com/user-attachments/assets/728f6b5b-ba5b-4df8-b5a7-1715175d573e" />
-
+<img width="1153" height="615" alt="Slide7" src="https://github.com/user-attachments/assets/61b4778d-a2e0-445f-9165-481950728e05" />
 
 Each batch = **one live Maestro case**. Stages activate as signals arrive; SLAs and audit history accumulate at every step regardless of which branch the case takes.
 
