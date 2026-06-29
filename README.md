@@ -52,7 +52,7 @@ The case remains active throughout the complete quality lifecycle:
 | **Product** | Paracetamol 500 mg Immediate-Release Tablets |
 | **Batch** | PTC-006 |
 | **Scenario** | A batch that meets release specifications but gradually accumulates multiple weak quality signals across manufacturing, testing, and environmental data. Individually, these signals are not out of specification; collectively, they indicate an elevated quality risk. |
-| **AI Recommendation** | Recommend placing the batch on **Quality Hold** and initiating a **Phase I Investigation** based on the aggregated risk assessment. |
+| **Agent Recommendation** | Recommend placing the batch on **Quality Hold** and initiating a **Phase I Investigation** based on the aggregated risk assessment. |
 | **Human Decision** | The QA reviewer evaluates the assembled evidence, considers the AI recommendation, and makes the final batch disposition decision in accordance with GMP procedures. |
 
 ## Problem It Solves
