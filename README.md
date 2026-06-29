@@ -108,7 +108,7 @@ In pharma quality, classification must be reproducible, attributable, timestampe
 
 **Structured rules decide. SOP context explains. Human QA approves.**
 
-## 4. Solution Architecture
+## Solution Architecture
 
 Reference architecture: every signal becomes case evidence, every recommendation hits a human gate, and every system update is approved.
 
@@ -116,9 +116,9 @@ Reference architecture: every signal becomes case evidence, every recommendation
 
 Each batch = **one live Maestro case**. Stages activate as signals arrive; SLAs and audit history accumulate at every step regardless of which branch the case takes.
 
-## 5. Setup Instructions
+## Setup Instructions
  
-### 5.1 Prerequisites
+### Prerequisites
  
 - A UiPath Automation Cloud tenant with the following licensed/enabled:
   - Orchestrator
@@ -134,7 +134,7 @@ Each batch = **one live Maestro case**. Stages activate as signals arrive; SLAs 
 - Sample data representing batch `PTC-006`: [Vigilance Q_EntityData.xlsx](https://docs.google.com/spreadsheets/d/105PbZyZepOxiPCMxytCZ536m8aIL1IJq/edit?usp=sharing&ouid=103203708202152722396&rtpof=true&sd=true)
 - Context grounding resource files - rule/reference documents used across the different agents: [Context Grounding](https://drive.google.com/drive/folders/12ulsAsz4_gtUotDDtDwR7CXMo9qBj1m7?usp=sharing)
   
-### 5.2 Clone the Repository into Studio Web
+### Clone the Repository into Studio Web
  
 1. Log in to UiPath Automation Cloud.
 2. Open Studio Web and go to Local Workspace.
@@ -143,7 +143,7 @@ Each batch = **one live Maestro case**. Stages activate as signals arrive; SLAs 
 5. Click clone. When the permission pop-up appears, click Allow.
 6. Wait for cloning to finish. This can take a few minutes depending on solution size.
    
-### 5.3 Resolve Validation Errors
+### Resolve Validation Errors
  
 Once cloning completes, the solution will typically show validation errors. Resolve them in this order:
  
@@ -153,21 +153,21 @@ Once cloning completes, the solution will typically show validation errors. Reso
 4. Open the Case Plan in Maestro and check for any remaining validation errors.
 5. **Action App User Assignment** - From within the Case Plan, open the Properties of each Action App (Data Review & Verification, Evidence Validation, and Quality Review), navigate to Assignment, and assign a user to each app. This must be completed before publishing; otherwise, human tasks will have no assigned user.
 
-### 5.4 Import Data Fabric Schema, Sample Data & Context Grounding
+### Import Data Fabric Schema, Sample Data & Context Grounding
  
-1. Import the Data Fabric schema using the Vigilance Q DataFabric Schema.json file provided in the Prerequisites section (5.1).
-2. Import the sample data for batch PTC-006 using the Vigilance Q_EntityData.xlsx file provided in the Prerequisites section (5.1). Ensure the data is loaded into the corresponding Data Fabric entities.
-3. Upload the Context Grounding resource files provided in the Prerequisites section (5.1) to a Storage Bucket. These files contain the rule and reference documents used by the different agents.
+1. Import the Data Fabric schema using the Vigilance Q DataFabric Schema.json file provided in the Prerequisites section.
+2. Import the sample data for batch PTC-006 using the Vigilance Q_EntityData.xlsx file provided in the Prerequisites section. Ensure the data is loaded into the corresponding Data Fabric entities.
+3. Upload the Context Grounding resource files provided in the Prerequisites section to a Storage Bucket. These files contain the rule and reference documents used by the different agents.
 4. Create an Index for the Storage Bucket containing the context grounding files. This enables the agents to perform context grounding and retrieve relevant documents during execution.
  
-### 5.5 Publish & Deploy
+### Publish & Deploy
  
 1. Once all validation errors are resolved and Action App users are assigned, publish the package.
 2. Deploy the solution to your target Orchestrator folder.
 3. Allocate the required license(s) to that folder.
 4. Configure the Data Fabric trigger to automatically start a Case whenever a new batch record is added in the LIMS entity.
 
-### 5.6 Run the Demo
+### Run the Demo
  
 1. Add a new batch record to the LIMS entity in Data Fabric representing batch `PTC-006`.
 2. A new Maestro Batch Quality Case is automatically created.
