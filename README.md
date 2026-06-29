@@ -2,11 +2,11 @@
 
 ## Project Description
 
-**Vigilance ‘Q’** is an agentic batch quality case management solution built for **UiPath AgentHack 2026 – Track 1: Maestro Case**.
+**Vigilance ‘Q’** is an agentic batch quality case management solution built for **UiPath AgentHack 2026 - Track 1: Maestro Case**.
 
 The solution helps pharmaceutical quality teams detect weak quality signals early, assemble evidence, route human decisions, and update enterprise systems only after approval.
 
-In pharmaceutical manufacturing, a batch rarely fails suddenly—it usually drifts first. Weak signals may appear across multiple enterprise systems, including:
+In pharmaceutical manufacturing, a batch rarely fails suddenly, it usually drifts first. Weak signals may appear across multiple enterprise systems, including:
 
 - LIMS
 - MES
@@ -138,7 +138,7 @@ Each batch = **one live Maestro case**. Stages activate as signals arrive; SLAs 
 - An Outlook / Microsoft 365 account for the QA Notification connection.
 - Data Fabric schema file (JSON): [Vigilance Q DataFabric Schema.json](https://drive.google.com/file/d/1XR_u331geyKIZRYd5TWpMWPydoEI8TpX/view?usp=sharing)
 - Sample data representing batch `PTC-006`: [Vigilance Q_EntityData.xlsx](https://docs.google.com/spreadsheets/d/105PbZyZepOxiPCMxytCZ536m8aIL1IJq/edit?usp=sharing&ouid=103203708202152722396&rtpof=true&sd=true)
-- Context grounding resource files — rule/reference documents used across the different agents: [Context Grounding](https://drive.google.com/drive/folders/12ulsAsz4_gtUotDDtDwR7CXMo9qBj1m7?usp=sharing)
+- Context grounding resource files - rule/reference documents used across the different agents: [Context Grounding](https://drive.google.com/drive/folders/12ulsAsz4_gtUotDDtDwR7CXMo9qBj1m7?usp=sharing)
   
 ### 5.2 Clone the Repository into Studio Web
  
@@ -147,17 +147,17 @@ Each batch = **one live Maestro case**. Stages activate as signals arrive; SLAs 
 3. Click Clone Solution.
 4. Connect your GitHub account and provide the repository URL: [Vigilance Q](https://github.com/deepaksreeram/Vigilance-Q)
 5. Click clone. When the permission pop-up appears, click Allow.
-6. Wait for cloning to finish — this can take a few minutes depending on solution size.
+6. Wait for cloning to finish. This can take a few minutes depending on solution size.
    
 ### 5.3 Resolve Validation Errors
  
 Once cloning completes, the solution will typically show validation errors. Resolve them in this order:
  
-1. **Connections** — reconnect/re-authenticate Data Fabric and Outlook Connections.
-2. **Indexes** — recreate the index used for context grounding/rule documents (see 5.4 below).
-3. **Entities** — create or refresh Data Fabric entities flagged as missing/out of sync.
+1. **Connections** - reconnect/re-authenticate Data Fabric and Outlook Connections.
+2. **Indexes** - recreate the index used for context grounding/rule documents (see 5.4 below).
+3. **Entities** - create or refresh Data Fabric entities flagged as missing/out of sync.
 4. Open the Case Plan in Maestro and check for any remaining validation errors.
-5. **Action App User Assignment** — From within the Case Plan, open the Properties of each Action App (Data Review & Verification, Evidence Validation, and Quality Review), navigate to Assignment, and assign a user to each app. This must be completed before publishing; otherwise, human tasks will have no assigned user.
+5. **Action App User Assignment** - From within the Case Plan, open the Properties of each Action App (Data Review & Verification, Evidence Validation, and Quality Review), navigate to Assignment, and assign a user to each app. This must be completed before publishing; otherwise, human tasks will have no assigned user.
 
 ### 5.4 Import Data Fabric Schema, Sample Data & Context Grounding
  
